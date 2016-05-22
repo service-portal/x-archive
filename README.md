@@ -33,7 +33,7 @@ Angular controller.
 
 
 #### Server Script
-Rhino Javascript
+Server Side JavaScript executed within the context of the widget intance related to it.
 
 <table width="100%">
 	<tr>
@@ -51,6 +51,10 @@ Rhino Javascript
 		<td valign="top"><code>data</code></td>
 		<td valign="top">An object containing properties set during server-side execution</td>
 	</tr>
+	<tr>
+		<td valign="top"><code>option</code></td>
+		<td valign="top">An object containing the schema option properties</td>
+	</tr>	
 </table>
 
 <table width="100%">
