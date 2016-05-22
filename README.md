@@ -32,7 +32,28 @@ Contains the an Angular template. It uses the `controllerAs c` syntax for basic 
  <h1>{{ c.data.message }}</h1>
 </div>
 ```
-
+#### Client Script
+<table width="100%">
+	<tr>
+		<th valign="top" colspan="3" align="left"><a href="#special" name="special">Special Methods</a></th>
+	</tr>
+	<tr>
+		<th valign="top" width="120px" align="left">Property</th>
+		<th valign="top" align="left">Description</th>
+	</tr>
+	<tr>
+		<td valign="top"><code>this.server.get(input)</code></td>
+		<td valign="top">Calls the server and sends custom `input`</td>
+	</tr>
+	<tr>
+		<td valign="top"><code>this.server.update()</code></td>
+		<td valign="top">Calls the server and `this.data` is automatically send to server side</td>
+	</tr>
+	<tr>
+		<td valign="top"><code>this.server.refresh()</code></td>
+		<td valign="top">Calls the server and automatically replaces the current options and data from the server response.</td>
+	</tr>	
+</table>
 
 #### Server Script
 Server Side JavaScript executed within the context of the widget intance related to it.
