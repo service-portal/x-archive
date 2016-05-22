@@ -34,3 +34,21 @@ Angular controller.
 
 #### Server Script
 Rhino Javascript
+
+<table width="100%">
+	<tr>
+		<th valign="top" colspan="3" align="left"><a href="#props" name="props">Variables</a></th>
+	</tr>
+	<tr>
+		<th valign="top" width="120px" align="left">Property</th>
+		<th valign="top" align="left">Description</th>
+	</tr>
+	<tr>
+		<td valign="top"><code>input</code></td>
+		<td valign="top">An object containing client-side properties set under `c.data`</td>
+	</tr>
+	<tr>
+		<td valign="top"><code>data</code></td>
+		<td valign="top">An object containing properties set during server-side execution</td>
+	</tr>
+</table>
