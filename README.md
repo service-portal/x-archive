@@ -26,11 +26,6 @@ A widget instace is a reference to a widget that contains: location, properties 
 #### Widget HTML
 Contains the Angular template. It uses the `controllerAs c` syntax for basic binding.
 
-#### Client Script
-Angular controller.
-
-##### this.server.update()
-
 
 #### Server Script
 Server Side JavaScript executed within the context of the widget intance related to it.
