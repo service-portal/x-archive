@@ -1,4 +1,5 @@
-Documentation reference guide for Service Portal for Developers
+# Service Portal Documentation
+Documentation reference guide for Service Portal for Developers.
 
 ### Service Portal
 Service Portal contains of two parts: 
