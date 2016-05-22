@@ -1,5 +1,17 @@
-# Service Portal
 This is a documentation reference guide for Developers by Developers.
+
+### Service Portal
+Service Portal contains of two parts: 
+- The framework: a set of APIs and JavaScript Angular Services and Directives that help to render a Portal.
+- The `sp_config` portal. A set of tools to help you configure and create and mantain widgets.
+
+### Portal
+A portal contains all the configuration settings for the site. The `url_suffix` helps to namespace the portal from other portals.
+
+### Page
+
+
+
 
 ### Widget
 A widget is a superset of an Angular 1.x directive that is tightly coupled to a server-side JavaScript code block powered by the Rhino engine under the ServiceNow platform.
