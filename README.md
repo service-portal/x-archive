@@ -39,7 +39,7 @@ Server Side JavaScript executed within the context of the widget intance related
 
 <table width="100%">
 	<tr>
-		<th valign="top" colspan="3" align="left"><a href="#props" name="props">Special Variables</a></th>
+		<th valign="top" colspan="3" align="left"><a href="#special" name="special">Special Variables</a></th>
 	</tr>
 	<tr>
 		<th valign="top" width="120px" align="left">Property</th>
