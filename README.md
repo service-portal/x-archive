@@ -23,13 +23,26 @@ A widget instace is a reference to a widget that contains: location, properties 
 #### Widget HTML
 Contains the an Angular template. It uses the `controllerAs c` syntax for basic binding.
 ```html
-<div>
- Enter your name:
- <input type="text" ng-model="c.data.sometext" ng-change="c.display()"/>
- <h1>{{ c.data.message }}</h1>
+<div>${Symbol Lookup}: <input ng-model="c.data.symbol" ng-model-options="{debounce: 750}" ng-change="c.update()" placeholder="Type stock symbol" />
+<div ng-show="c.data.symbol" style="font-size: 2em;">        
+  <p>${Stock Price}: <span ng-if="!c.data.price">${Requesting stock price}</span><span>{{c.data.price | currency:"$"}}</span></p>
+ <img ng-src="http://chart.finance.yahoo.com/z?s={{c.data.symbol}}&t=1d&z=l"/>
+</div>
 </div>
 ```
 #### Client Script
+```javascript
+function() {	
+	var c = this;
+	c.update = function() {
+		c.data.price = false;
+		c.server.get({symbol: c.data.symbol}).then(function(r) {			
+			c.data.price = r.data.price;			
+		});
+	}
+}
+```
+
 <table width="100%">
 	<tr>
 		<th valign="top" colspan="3" align="left"><a href="#special" name="special">Special Methods</a></th>
@@ -53,6 +66,15 @@ Contains the an Angular template. It uses the `controllerAs c` syntax for basic 
 </table>
 
 #### Server Script
+```javascript
+if (input) {
+	var r = new RESTMessage('Yahoo Finance', 'get');
+	r.setStringParameter('symbol', input.symbol);
+	var response = r.execute();
+	data.price = response.getBody();
+}
+```
+
 Server Side JavaScript executed within the context of the widget intance related to it.
 
 <table width="100%">
