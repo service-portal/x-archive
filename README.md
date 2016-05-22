@@ -36,6 +36,7 @@ ng-model-options="{debounce: 750}" ng-change="c.update()" placeholder="Type stoc
 </div>
 ```
 #### Client Script
+The Client Script is the the Angular Directive Controller.
 ```javascript
 function() {	
 	var c = this;
