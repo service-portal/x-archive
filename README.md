@@ -1,2 +1,2 @@
-# Service Portal Documentation
-This is a documentation reference guide to use Service Portal
+# Service Portal
+This is a documentation reference guide for Developers by Developers.
