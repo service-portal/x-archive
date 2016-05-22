@@ -52,3 +52,21 @@ Rhino Javascript
 		<td valign="top">An object containing properties set during server-side execution</td>
 	</tr>
 </table>
+
+<table width="100%">
+	<tr>
+		<th valign="top" colspan="3" align="left"><a href="#props" name="props">Options</a></th>
+	</tr>
+	<tr>
+		<th valign="top" width="120px" align="left">Method</th>
+		<th valign="top" align="left">Description</th>
+	</tr>
+	<tr>
+		<td valign="top"><code>console.log(String|Object)</code></td>
+		<td valign="top">Ouputs into the Browser console, server-side JavaScript objects and strings that can be displayed</td>
+	</tr>
+	<tr>
+		<td valign="top"><code>$sp.log(String|Object)</code></td>
+		<td valign="top">Outputs into the Java console, server-side JavaScript objects and strings that can be displayed</td>
+	</tr>
+</table>
