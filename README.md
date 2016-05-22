@@ -45,7 +45,7 @@ Rhino Javascript
 	</tr>
 	<tr>
 		<td valign="top"><code>input</code></td>
-		<td valign="top">An object containing client-side properties set under `c.data`. It will have an `undefined` value until the client-side controller calls `c.server.update()`</td>
+		<td valign="top">An object containing client-side properties set under <code>c.data</code>. It will have an <code>undefined</code> value until the client-side controller calls <code>c.server.update()</code></td>
 	</tr>
 	<tr>
 		<td valign="top"><code>data</code></td>
