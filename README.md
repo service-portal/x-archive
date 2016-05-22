@@ -12,9 +12,6 @@ A portal contains all the configuration settings for the site. The `url_suffix` 
 ### Page
 A page is a collection of containers rows and columns that contain widgets built using the Service Portal Designer. Pages are referenced by their Page ID. Pages can be used on multiple portals.
 
-
-
-
 ### Widget
 A widget is a superset of an Angular 1.x directive that is tightly coupled to a server-side JavaScript code block powered by the Rhino engine under the ServiceNow platform.
 Since widgets are `read-only` to benefit from future updates, you can't update their code. If you need to make major changes,
@@ -43,11 +40,11 @@ Contains the an Angular template. It uses the `controllerAs c` syntax for basic 
 	</tr>
 	<tr>
 		<td valign="top"><code>this.server.get(input)</code></td>
-		<td valign="top">Calls the server and sends custom `input`</td>
+		<td valign="top">Calls the server and sends custom <code>input</code></td>
 	</tr>
 	<tr>
 		<td valign="top"><code>this.server.update()</code></td>
-		<td valign="top">Calls the server and `this.data` is automatically send to server side</td>
+		<td valign="top">Calls the server and <code>this.data</code> is automatically send to server side</td>
 	</tr>
 	<tr>
 		<td valign="top"><code>this.server.refresh()</code></td>
