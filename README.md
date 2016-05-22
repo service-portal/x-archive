@@ -59,7 +59,7 @@ Server Side JavaScript executed within the context of the widget intance related
 
 <table width="100%">
 	<tr>
-		<th valign="top" colspan="3" align="left"><a href="#props" name="props">Options</a></th>
+		<th valign="top" colspan="3" align="left"><a href="#props" name="props">Debugging</a></th>
 	</tr>
 	<tr>
 		<th valign="top" width="120px" align="left">Method</th>
