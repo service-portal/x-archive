@@ -21,4 +21,7 @@ Since widgets are `read-only` to benefit from future updates, you can't update t
 clone the widget and give it another `name` and `id`.
 
 ### Widget Instance
-A widget instace is a reference to a widget that contains: location, properties and CSS especific for that instance. A widget used multiple times in the same page, will use multiple instances. 
+A widget instace is a reference to a widget that contains: location, properties and CSS especific for that instance. A widget used multiple times in the same page, will use multiple instances.
+
+#### Widget HTML
+Contains the Angular template. It uses the `controllerAs c` syntax for basic binding.
