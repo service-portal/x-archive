@@ -21,7 +21,7 @@ Service Portal contains of two parts:
 	</tr>
 	<tr>
 		<td valign="top">URL suffix</td>
-		<td valign="top">helps to namespace the portal from other portals. The Service Portal is under: <code>/sp/</code></td>
+		<td valign="top">Directory that helps to differenciate one portal from others. The Service Portal is under: <code>/sp/</code></td>
 	</tr>
 	<tr>
 		<td valign="top">Homepage</td>
