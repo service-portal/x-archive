@@ -48,7 +48,7 @@ This is where you can write any custom styles that you want to apply to your wid
 	</tr>
 	<tr>
 		<td valign="top">1. Theme</td>
-		<td valign="top">You can load CSS file or set SCSS variables</td>
+		<td valign="top">You can load external CSS files or set SCSS variables and global mixins</td>
 	</tr>
 	<tr>
 		<td valign="top">2. Page</td>
