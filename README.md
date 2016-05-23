@@ -61,7 +61,7 @@ function() {
 		<th valign="top" align="left">Description</th>
 	</tr>
 	<tr>
-		<td valign="top"><code>this.server.get(Object: input)</code></td>
+		<td valign="top"><code>this.server.get([Object])</code></td>
 		<td valign="top">Calls the server and sends custom <code>input</code></td>
 	</tr>
 	<tr>
