@@ -29,7 +29,7 @@ Service Portal contains of two parts:
 	</tr>
 	<tr>
 		<td valign="top">Knowledge base</td>
-		<td valign="top">Default knowledge base</td>
+		<td valign="top">When you perform a search this is the default knowledge base</td>
 	</tr>	
 </table>
 
