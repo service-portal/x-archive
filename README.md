@@ -3,8 +3,8 @@ This reference guide contains documentation for Service Portal Developers.
 
 ### Service Portal
 Service Portal contains of two parts: 
-- The framework: a set of APIs and JavaScript Angular Services and Directives that help to render a Portal.
-- The Portals. For example the: `sp_config` Portal contains a set tools to help you configure and create and mantain widgets.
+- The framework: a set of APIs and JavaScript Angular Services and Directives that help to render a Portals.
+- The Portals. For example: `sp_config` is a Portal contains a set tools to help you configure and create and mantain widgets.
 
 ### Portal
 A portal contains all the configuration settings for the site. The `url_suffix` helps to namespace the portal from other portals.
