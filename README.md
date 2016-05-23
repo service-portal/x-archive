@@ -154,6 +154,6 @@ Server Side JavaScript executed within the context of the widget intance related
 </table>
 
 ### Embeded Widgets
-```
+```html
 <sp-widget widget="c.myCatItemWidget"></sp-widget>
 ```
