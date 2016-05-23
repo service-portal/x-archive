@@ -17,7 +17,7 @@ Service Portal contains of two parts:
 	</tr>
 	<tr>
 		<td valign="top">Title</td>
-		<td valign="top">Page <code>title</title></td>
+		<td valign="top">Page title added to: <code>title</code> </td>
 	</tr>
 	<tr>
 		<td valign="top">URL suffix</td>
