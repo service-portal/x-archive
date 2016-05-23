@@ -4,7 +4,7 @@ This reference guide contains documentation for Service Portal Developers.
 ### Service Portal
 Service Portal contains of two parts: 
 - Framework: a set of APIs and Angular.js services and directives that help to render portals.
-- Portals: a group of independent pages that reference each other by their pageId.
+- Portals: a group of independent pages that reference each other by their `page id`.
 
 ### Portal Configuration
 <table width="100%">
