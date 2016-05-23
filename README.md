@@ -43,7 +43,7 @@ This is where you can write any custom styles that you want to apply to your wid
 		<th valign="top" colspan="3" align="left"><a href="#special" name="special">Scoped CSS</a></th>
 	</tr>
 	<tr>
-		<th valign="top" width="2000px" align="left">Level</th>
+		<th valign="top" width="180px" align="left">Level</th>
 		<th valign="top" align="left">Description</th>
 	</tr>
 	<tr>
