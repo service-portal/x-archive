@@ -3,8 +3,8 @@ This reference guide contains documentation for Service Portal Developers.
 
 ### Service Portal
 Service Portal contains of two parts: 
-- Framework: a set of APIs and Angular services and directives that help to render portals.
-- Portals: a group of independent pages that reference each other by their `page id`.
+- Framework: a set of APIs and Angular.js services and directives that help to render portals.
+- Portals. a group of pages linked by their pageId. For example: `sp_config` is a Portal contains a set tools to help you configure and create and mantain widgets.
 
 ### Portal Configuration
 <table width="100%">
@@ -17,11 +17,11 @@ Service Portal contains of two parts:
 	</tr>
 	<tr>
 		<td valign="top">Title</td>
-		<td valign="top">Page title added to: <code>title</code> </td>
+		<td valign="top">Page <code>title</title></td>
 	</tr>
 	<tr>
 		<td valign="top">URL suffix</td>
-		<td valign="top">Directory that helps to differenciate one portal from others. The Service Portal is under: <code>/sp/</code></td>
+		<td valign="top">helps to namespace the portal from other portals.</td>
 	</tr>
 	<tr>
 		<td valign="top">Homepage</td>
@@ -29,7 +29,7 @@ Service Portal contains of two parts:
 	</tr>
 	<tr>
 		<td valign="top">Knowledge base</td>
-		<td valign="top">When you perform a search this is the default knowledge base</td>
+		<td valign="top">Default knowledge base</td>
 	</tr>	
 </table>
 
@@ -183,3 +183,43 @@ The spWidget directive takes a widget model and renders the compiled widget exac
 ```html
 <sp-widget widget="c.myCatItemWidget"></sp-widget>
 ```
+
+
+### $sp API
+Service Portal probides a set of convenience methods found on the global `$sp` object, which is available in any widget server script.
+
+<table width="100%">
+	<tr>
+		<th valign="top" colspan="3" align="left"><a href="#props" name="props">$sp</a></th>
+	</tr>
+	<tr>
+		<th valign="top" width="120px" align="left">Method</th>
+		<th valign="top" align="left">Description</th>
+		<th valign="top" width="120px" align="left">Return Value</th>
+	</tr>
+	<tr>
+		<td valign="top"><code>getPortalRecord()</code></td>
+		<td valign="top">Returns the portal's GlideRecord</td>
+		<td valign="top">GlideRecord</td>
+	</tr>
+	<tr>
+		<td valign="top"><code>getValue(/*String*/ name)</code></td>
+		<td valign="top">Returns the named value of the JSON request, instance, or portal</td>
+		<td valign="top">Value of the specified field. Null if the request does not exist or has no such parameter, the instance does not exist or has no such parameter, or the portal is null or has no such parameter.</td>
+	</tr>
+	<tr>
+		<td valign="top"><code>getWidgetParameters()</code></td>
+		<td valign="top">Returns the widget's parameters</td>
+		<td valign="top">Returns an empty object if the widget has no parameters.</td>
+	</tr>
+	<tr>
+		<td valign="top"><code>getDisplayValue(/*String*/ name)</code></td>
+		<td valign="top">Returns the display value of the specified parameter</td>
+		<td valign="top">Returns the display value of the specified parameter. Returns an empty string if the request, instance, and portal do not exist. Returns null if the request exists but has no such parameter, or the instance exists but has no such parameter.</td>
+	</tr>
+	<tr>
+		<td valign="top"><code>getValues(/*Scriptable*/ data, /*String*/ names)</code></td>
+		<td valign="top">Copies values from the request or instance into the data parameter.</td>
+		<td valign="top">void</td>
+	</tr>
+</table>
