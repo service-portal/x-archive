@@ -38,6 +38,32 @@ ng-model-options="{debounce: 750}" ng-change="c.update()" placeholder="Type stoc
 #### CSS / SCSS
 This is where you can write any custom styles that you want to apply to your widget. Any CSS rules that you write here are scoped to the widget – this means that rules defined here effect the widget they are defined for and nothing else. Additionally, you can make use of many SASS/SCSS constructs, including variables, many mix-ins, and nested rules. For more, see our documentation and the SCSS documentation.
 
+<table width="100%">
+	<tr>
+		<th valign="top" colspan="3" align="left"><a href="#special" name="special">Scoped CSS</a></th>
+	</tr>
+	<tr>
+		<th valign="top" width="120px" align="left">Level</th>
+		<th valign="top" align="left">Description</th>
+	</tr>
+	<tr>
+		<td valign="top">Theme</td>
+		<td valign="top">You can load CSS file or set SCSS variables</td>
+	</tr>
+	<tr>
+		<td valign="top">Page</td>
+		<td valign="top">CSS specific to a page</td>
+	</tr>
+	<tr>
+		<td valign="top">Widget</td>
+		<td valign="top">CSS specific to the widget</td>
+	</tr>
+	<tr>
+		<td valign="top">Widget instance</td>
+		<td valign="top">CSS specific to the widget instance</td>
+	</tr>	
+</table>
+
 #### Client Script
 This is where you should define the Controller function for your Widget. Consider every widget to be a custom Angular directive – you define the controller for that directive here. This is where you handle all the client-side logic and template binding for your widget.
 ```javascript
