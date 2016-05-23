@@ -47,19 +47,19 @@ This is where you can write any custom styles that you want to apply to your wid
 		<th valign="top" align="left">Description</th>
 	</tr>
 	<tr>
-		<td valign="top">Theme</td>
+		<td valign="top">1. Theme</td>
 		<td valign="top">You can load CSS file or set SCSS variables</td>
 	</tr>
 	<tr>
-		<td valign="top">Page</td>
+		<td valign="top">2. Page</td>
 		<td valign="top">CSS specific to a page</td>
 	</tr>
 	<tr>
-		<td valign="top">Widget</td>
+		<td valign="top">3. Widget</td>
 		<td valign="top">CSS specific to the widget</td>
 	</tr>
 	<tr>
-		<td valign="top">Widget instance</td>
+		<td valign="top">4. Widget instance</td>
 		<td valign="top">CSS specific to the widget instance</td>
 	</tr>	
 </table>
