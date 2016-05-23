@@ -21,7 +21,7 @@ clone the widget and give it another `name` and `id`.
 A widget instace is a reference to a widget that contains: location, properties and CSS especific for that instance. A widget used multiple times in the same page, will use multiple instances.
 
 #### Widget HTML
-Contains the an Angular template. It uses the `controllerAs c` syntax for basic binding.
+This is where the HTML markup for your widget goes. Inside the template , you can leverage AngularJS’s two-way binding to bind your controller variables to your markup. It uses the `controllerAs c` syntax for basic binding.
 ```html
 <div>
 ${Symbol Lookup}: 
@@ -35,8 +35,11 @@ ng-model-options="{debounce: 750}" ng-change="c.update()" placeholder="Type stoc
 </div>
 </div>
 ```
+#### CSS / SCSS
+This is where you can write any custom styles that you want to apply to your widget. Any CSS rules that you write here are scoped to the widget – this means that rules defined here effect the widget they are defined for and nothing else. Additionally, you can make use of many SASS/SCSS constructs, including variables, many mix-ins, and nested rules. For more, see our documentation and the SCSS documentation.
+
 #### Client Script
-The Client Script is the the Angular Directive Controller.
+This is where you should define the Controller function for your Widget. Consider every widget to be a custom Angular directive – you define the controller for that directive here. This is where you handle all the client-side logic and template binding for your widget.
 ```javascript
 function() {	
 	var c = this;
@@ -72,6 +75,7 @@ function() {
 </table>
 
 #### Server Script
+This is where you put the server-side logic for your widget. This is helpful primarily with interacting with the Glide platform through our server-side APIs. If you have experience writing Javascript within our platform, you will have no problem writing server scripts.
 ```javascript
 if (input) {
 	var r = new RESTMessage('Yahoo Finance', 'get');
