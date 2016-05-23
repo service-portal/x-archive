@@ -152,3 +152,8 @@ Server Side JavaScript executed within the context of the widget intance related
 		<td valign="top">Outputs into the Java console, server-side JavaScript objects and strings that can be displayed</td>
 	</tr>
 </table>
+
+### Embeded Widgets
+```
+<sp-widget widget="c.myCatItemWidget"></sp-widget>
+```
