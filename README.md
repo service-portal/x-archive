@@ -21,6 +21,6 @@ This reference guide contains documentation for Service Portal Developers.
 
   - [Server Script APIs](/widget_server_script_apis.md)
 
-
++ [Debugging](/debugging.md)
 ___
 >This site is nonofficial and not endorsed by ServiceNow.
