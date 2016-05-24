@@ -9,31 +9,14 @@ Service Portal contains of two parts:
 - *Portals*: a group of pages linked by their pageId. For example: `sp_config` is a Portal contains a set tools to help you configure and create and mantain widgets.
 
 ### Portal Configuration
-<table width="100%">
-	<tr>
-		<th valign="top" colspan="3" align="left"><a href="#special" name="special">Portal Configuration</a></th>
-	</tr>
-	<tr>
-		<th valign="top" width="180px" align="left">Property</th>
-		<th valign="top" align="left">Description</th>
-	</tr>
-	<tr>
-		<td valign="top">Title</td>
-		<td valign="top">Page <code>title</title></td>
-	</tr>
-	<tr>
-		<td valign="top">URL suffix</td>
-		<td valign="top">helps to namespace the portal from other portals.</td>
-	</tr>
-	<tr>
-		<td valign="top">Homepage</td>
-		<td valign="top">The first page that the portal will load</td>
-	</tr>
-	<tr>
-		<td valign="top">Knowledge base</td>
-		<td valign="top">Default knowledge base</td>
-	</tr>	
-</table>
+
+| Property | Description |
+| :------ | :----------- |
+| Title   | Page `title` |
+| Url Suffix | helps to namespace the portal from other portals. |
+| Homepage    | The first page that the portal will load |
+|Knowledge base | Default knowledge base |
+
 
 ### Page
 A page is a collection of containers rows and columns that contain widgets built using the Service Portal Designer. Pages are referenced by their Page ID. Pages can be used on multiple portals.
