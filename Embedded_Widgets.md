@@ -37,15 +37,20 @@ spUtil.get("widget-sc-cat-item", {sys_id: "your_catalog_item_sys_id"}).then(func
 **Parameters**
 - widget\_id _string_  
    Can be a **Widget Id** or **Widget sys_id**
-
 - data _object_  
    An object to post to the widget's server script. Refer to this object as **input** in your server script.
 
 **callback**  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The callback function is called when the widget model is ready. The response object contains the full widget model.
+The callback function is called when the widget model is ready. The response object contains the full widget model.
 
 ##### Getting a widget model from server script
 
 ```javascript
 data.catalogItemWidget = $sp.getWidget("widget-sc-cat-item", {sys_id: "your_catalog_item_sys_id"});
 ```
+**Parameters**
+- widget\_id _string_  
+   Can be a **Widget Id** or **Widget sys_id**
+- options _object_  
+   An object to pass to the widget's server script. Refer to this object as **options** in your server script.
+
