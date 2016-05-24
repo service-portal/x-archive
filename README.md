@@ -97,7 +97,6 @@ if (input) {
 | `input`   | An object containing client-side properties set under `c.data`. It will have an `undefined` value until the client-side controller calls `c.server.update()` |
 | `data`| An object containing properties set during server-side execution |
 | `option`    | An object containing the schema option properties |
-| 4. Widget instance | CSS specific to the widget instance |
 
 Server Side JavaScript executed within the context of the widget intance related to it.
 
