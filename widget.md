@@ -9,3 +9,17 @@ A widget instace is a reference to a widget that contains: location, properties 
 
 ### Embeded Widgets
 The spWidget directive takes a widget model and renders the compiled widget exactly where you put it in your HTML Template. 
+
+Learn more: 
+
+[Widget Dependencies](/Widget_Dependencies.md)
+
+[Widget Server Script](/widget_server_script.md)
+
+[Widget CSS](/widget_css.md)
+
+[Widget HTML](/widget_html.md)
+
+[Widget Client Script](/widget_client_script.md)
+
+[Widget Server Script APIs](/widget_server_script_apis.md)
