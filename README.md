@@ -1,8 +1,6 @@
 # Service Portal Documentation
 This reference guide contains documentation for Service Portal Developers.
 
->This site is nonofficial and not endorsed by ServiceNow.
-
 [Service Portal](/service_portal.md)
 
 [Portal](/portal.md)
@@ -22,3 +20,6 @@ This reference guide contains documentation for Service Portal Developers.
 [Widget Client Script](/widget_client_script.md)
 
 [Widget Server Script APIs](/widget_server_script_apis.md)
+
+
+>This site is nonofficial and not endorsed by ServiceNow.
