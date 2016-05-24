@@ -9,7 +9,7 @@ Use it like this:
 ```html
 <sp-widget widget="c.myCatItemWidget"></sp-widget>
 ```
-
+<br id="thing"/>
 #### Widget Model
 The widget model contains all of the client-side parts of a widget needed to create an angular directive. The HTML template, client script, and link function are loaded just as they are in the sp_widget record. The data property is the result of the widget's server script execution. Anything that you put on the data object on the server is available in the data object on the client.
 
