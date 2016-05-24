@@ -25,9 +25,9 @@ Here is a detailed look at some of the fields in the widget model:
 | template | string | The widget's HTML Template field |
 
 
-There are 2 ways to get a widget model for use with <sp-widget />
+#### There are 2 ways to get a widget model for use with \<sp-widget />
 
-#### Getting a widget model from client script
+##### Getting a widget model from client script
 
 ```
 spUtil.get("widget-sc-cat-item", {sys_id: "your catalog item sys_id"}).then(function(response) {
@@ -43,7 +43,7 @@ spUtil.get( string, **object** )
 
 > An object to post to the widget's server script. _refer to this object as **input** in your server script_ **
 
-#### Getting a widget model from server script
+##### Getting a widget model from server script
 
 ```
 data.catalogItemWidget = $sp.getWidget("widget-sc-cat-item", {sys_id: "your catalog item sys_id"});
