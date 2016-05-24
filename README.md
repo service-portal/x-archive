@@ -3,6 +3,11 @@ This reference guide contains documentation for Service Portal Developers.
 
 >This site is nonofficial and not endorsed by ServiceNow.
 
+### Index
+[Widget Server Script](/widget_server_script.md)
+
+
+
 ### Service Portal
 Service Portal contains of two parts: 
 - *Framework*: a set of APIs and [Angular.js](https://angularjs.org/) services and directives that help to render portals.
