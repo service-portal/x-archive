@@ -29,22 +29,22 @@ Here is a detailed look at some of the fields in the widget model:
 
 ##### Getting a widget model from client script
 
-```
-spUtil.get("widget-sc-cat-item", {sys_id: "your catalog item sys_id"}).then(function(response) {
+```javascript
+spUtil.get("widget-sc-cat-item", {sys_id: "your_catalog_item_sys_id"}).then(function(response) {
 	c.catalogItemWidget = response;
 });
 ```
 
-spUtil.get( **string**, object )
+spUtil.get( `string`, object )
 
 > Can be a **Widget Id** or **Widget sys_id**
 
-spUtil.get( string, **object** )
+spUtil.get( string, `object` )
 
 > An object to post to the widget's server script. Refer to this object as **input** in your server script.
 
 ##### Getting a widget model from server script
 
-```
-data.catalogItemWidget = $sp.getWidget("widget-sc-cat-item", {sys_id: "your catalog item sys_id"});
+```javascript
+data.catalogItemWidget = $sp.getWidget("widget-sc-cat-item", {sys_id: "your_catalog_item_sys_id"});
 ```
