@@ -4,6 +4,8 @@ This reference guide contains documentation for Service Portal Developers.
 >This site is nonofficial and not endorsed by ServiceNow.
 
 ### Index
+[Portal Configuration](/portal_configuration.md)
+
 [Widget Dependencies](/Widget_Dependencies.md)
 
 [Widget Server Script](/widget_server_script.md)
