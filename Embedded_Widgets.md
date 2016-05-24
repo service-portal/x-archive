@@ -10,7 +10,8 @@ Use it like this:
 <sp-widget widget="c.myCatItemWidget"></sp-widget>
 ```
 
-#### Widget Model in depth
+Widget Model in depth
+------
 The widget model contains all of the client-side parts of a widget needed to create an angular directive. The HTML template, client script, and link function are loaded just as they are in the sp_widget record. The data property is the result of the widget's server script execution. Anything that you put on the data object on the server is available in the data object on the client.
 
 Here is a detailed look at some of the fields in the widget model: 
@@ -24,9 +25,9 @@ Here is a detailed look at some of the fields in the widget model:
 | options | object | The options used to initialize the widget |
 | template | string | The widget's HTML Template field |
 
-<a name="get_one" href="#get_one" />  
-
-#### There are 2 ways to get a widget model for use with \<sp-widget />
+<a name="get_one" href="#get_one"></a>  
+There are 2 ways to get a widget model for use with \<sp-widget />
+------
 
 <a name="get_one" />##### Getting a widget model from client script
 
