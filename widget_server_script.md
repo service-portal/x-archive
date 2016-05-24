@@ -1,4 +1,4 @@
-#### Server Script
+#### Widget Server Script
 This is where you put the server-side logic for your widget. This is helpful primarily with interacting with the Glide platform through our server-side APIs. If you have experience writing Javascript within our platform, you will have no problem writing server scripts.
 ```javascript
 if (input) {
