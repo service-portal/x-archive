@@ -3,7 +3,6 @@ This reference guide contains documentation for Service Portal Developers.
 
 >This site is nonofficial and not endorsed by ServiceNow.
 
-### Index
 [Portal Configuration](/portal_configuration.md)
 
 [Widget](/widget.md)
