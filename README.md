@@ -1,5 +1,6 @@
 # Service Portal Documentation
 This reference guide contains documentation for Service Portal Developers.
+
 This site is not endorsed by ServiceNow.
 
 ### Service Portal
