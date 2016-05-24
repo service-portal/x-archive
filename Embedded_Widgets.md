@@ -2,7 +2,7 @@
 ## Embedded Widgets
 
 ### <sp-widget />
-You can embed any widget inside of your widget’s HTML template using the spWidget directive. This directive requires a complete widget model which you can get using spUtil.get() on the client or $sp.getWidget on the server. [See below for details](#get_1).
+You can embed any widget inside of your widget’s HTML template using the spWidget directive. This directive requires a complete widget model which you can get using [spUtil.get()](#get_one) on the client or [$sp.getWidget](#get_one) on the server.
 
 Use it like this:
 
@@ -24,6 +24,8 @@ Here is a detailed look at some of the fields in the widget model:
 | options | object | The options used to initialize the widget |
 | template | string | The widget's HTML Template field |
 
+<a name="get_one" href="#get_one" />  
+
 #### There are 2 ways to get a widget model for use with \<sp-widget />
 
 <a name="get_one" />##### Getting a widget model from client script
@@ -42,8 +44,7 @@ spUtil.get("widget-sc-cat-item", {sys_id: "your_catalog_item_sys_id"}).then(func
 **Callback**  
 The callback function is called when the widget model is ready. The response object contains the full widget model.
 
-<a name="get_one" href="#get_one" />  
-#### Getting a widget model from server script
+##### Getting a widget model from server script
 
 ```javascript
 data.catalogItemWidget = $sp.getWidget("widget-sc-cat-item", {sys_id: "your_catalog_item_sys_id"});
