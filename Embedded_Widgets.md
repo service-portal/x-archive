@@ -42,7 +42,7 @@ spUtil.get("widget-sc-cat-item", {sys_id: "your_catalog_item_sys_id"}).then(func
 **Callback**  
 The callback function is called when the widget model is ready. The response object contains the full widget model.
 
-<br id="get_1"></br>
+<br id="get_1" />
 ##### Getting a widget model from server script
 
 ```javascript
