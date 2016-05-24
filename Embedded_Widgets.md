@@ -26,7 +26,7 @@ Here is a detailed look at some of the fields in the widget model:
 | template | string | The widget's HTML Template field |
 
 <a name="get_one" href="#get_one"></a>  
-There are 2 ways to get a widget model for use with \<sp-widget />
+How to get a widget model
 ------
 
 #### spUtil.get() - Get a widget model from client script
