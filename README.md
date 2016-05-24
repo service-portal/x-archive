@@ -9,17 +9,17 @@ This reference guide contains documentation for Service Portal Developers.
 
 + [Widget](/widget.md)
 
-  - [Widget Dependencies](/Widget_Dependencies.md)
+  - [Dependencies](/Widget_Dependencies.md)
 
-  - [Widget Server Script](/widget_server_script.md)
+  - [Server Script](/widget_server_script.md)
 
-  - [Widget CSS](/widget_css.md)
+  - [CSS/SCSS](/widget_css.md)
   
-  - [Widget HTML](/widget_html.md)
+  - [HTML](/widget_html.md)
 
-  - [Widget Client Script](/widget_client_script.md)
+  - [Client Script](/widget_client_script.md)
 
-  - [Widget Server Script APIs](/widget_server_script_apis.md)
+  - [Server Script APIs](/widget_server_script_apis.md)
 
 
 ___
