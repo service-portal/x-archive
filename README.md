@@ -114,15 +114,15 @@ function() {
 	</tr>
 	<tr>
 		<td valign="top"><code>this.server.get([Object])</code></td>
-		<td valign="top">Calls the server and sends custom <code>input</code></td>
+		<td valign="top">Calls the server and sends custom <code>input</code>. Returns <code>Promise</code>.</td>
 	</tr>
 	<tr>
 		<td valign="top"><code>this.server.update()</code></td>
-		<td valign="top">Calls the server and <code>this.data</code> is automatically send to server side</td>
+		<td valign="top">Calls the server and <code>this.data</code> is automatically send to server side. Returns <code>Promise</code>.</td>
 	</tr>
 	<tr>
 		<td valign="top"><code>this.server.refresh()</code></td>
-		<td valign="top">Calls the server and automatically replaces the current options and data from the server response.</td>
+		<td valign="top">Calls the server and automatically replaces the current options and data from the server response. Returns <code>Promise</code>.</td>
 	</tr>	
 </table>
 
