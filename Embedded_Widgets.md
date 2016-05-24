@@ -35,14 +35,14 @@ spUtil.get("widget-sc-cat-item", {sys_id: "your_catalog_item_sys_id"}).then(func
 });
 ```
 
-spUtil.get( **string** `Widget Id`, object ).then(callback)
+spUtil.get( _string_, object ).then( callback )
 > Can be a **Widget Id** or **Widget sys_id**
 
-spUtil.get( string, **object** `post data`).then(callback)
+spUtil.get( string, _object_ ).then( callback )
 > An object to post to the widget's server script. Refer to this object as **input** in your server script.
 
-spUtil.get( string, object ).then(function(**response**){} `callback`)
-> The response object contains the full widget model.
+spUtil.get( string, object ).then( _callback_ )
+> The callback function to execute when the widget model is ready. The response object contains the full widget model.
 
 ##### Getting a widget model from server script
 
