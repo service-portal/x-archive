@@ -5,8 +5,8 @@ This reference guide contains documentation for Service Portal Developers.
 
 ### Service Portal
 Service Portal contains of two parts: 
-- *Framework*: a set of APIs and [Angular.js](https://angularjs.org/) services and directives that help to render portals.
-- *Portals*: a group of pages linked by their `page id`. For example: `[your instance]/sp_config` is a Portal that contains a set tools to help you configure and create and mantain widgets.
+- *Framework*: a set of APIs and Angular.js services and directives that help to render portals.
+- *Portals*: a group of pages linked by their pageId. For example: `sp_config` is a Portal contains a set tools to help you configure and create and mantain widgets.
 
 ### Portal Configuration
 
@@ -90,17 +90,29 @@ if (input) {
 }
 ```
 
-[Server-side variables](#server_side_variables)
-
-| Property | Description |
-| :------ | :----------- |
-| `input`   | An object containing client-side properties set under `c.data`. It will have an `undefined` value until the client-side controller calls `c.server.update()` |
-| `data`| An object containing properties set during server-side execution |
-| `option`    | An object containing the schema option properties |
-
 Server Side JavaScript executed within the context of the widget intance related to it.
 
-
+<table width="100%">
+	<tr>
+		<th valign="top" colspan="3" align="left"><a href="#special" name="special">Server-side variables</a></th>
+	</tr>
+	<tr>
+		<th valign="top" width="120px" align="left">Property</th>
+		<th valign="top" align="left">Description</th>
+	</tr>
+	<tr>
+		<td valign="top"><code>input</code></td>
+		<td valign="top">An object containing client-side properties set under <code>c.data</code>. It will have an <code>undefined</code> value until the client-side controller calls <code>c.server.update()</code></td>
+	</tr>
+	<tr>
+		<td valign="top"><code>data</code></td>
+		<td valign="top">An object containing properties set during server-side execution</td>
+	</tr>
+	<tr>
+		<td valign="top"><code>option</code></td>
+		<td valign="top">An object containing the schema option properties</td>
+	</tr>	
+</table>
 
 <table width="100%">
 	<tr>
@@ -328,3 +340,18 @@ Service Portal provides a set of convenience methods found on the global `$sp` o
 		<td valign="top">Sends the message to the console log</td>
 	</tr>
 </table>
+---
+## Widget Dependencies
+In Service Portal, it is possible to link Javascript and CSS files to widgets. This allows developers to create dependencies between their widgets and third party libraries, external style sheets, and angular modules. Dependencies are only fetched from the server at the time that they are needed, which keeps initial page loads very fast. 
+
+Following is a step-by-step guide on creating new dependency packages and associating them with widgets.
+
+### Creating a Dependency Package
+A dependency package is a collection of Javascript and CSS files that can be then connected to a widget. Dependencies can be found in the table `sp_dependency`, or by navigating to the Service Portal module in the navigator and selecting the Dependencies submodule.
+
+In a dependency record, you will define the following:
+1. Name - The name that your dependency will be referred to by (Useful for selecting a dependency from a dropdown list)
+2. Include on page load - Select if you want your dependency to be loaded onto the page on initial page load of Service Portal, or leave unchecked to load the dependency only when the linked widget is loaded onto a page.
+3. Angular module name - Only necessary if the linked Javascript is an Angular module. Provide the name of the Angular module name that you are loading in, so that it can be injected into the Service Portal angular application. Leave blank if not applicable.
+
+Once these fields are defined, you can start creating records in the `sp_js_include` and `sp_css_include` table and adding them to the JS Includes and CSS Includes related lists in a dependency record.
