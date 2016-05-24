@@ -12,14 +12,14 @@ The spWidget directive takes a widget model and renders the compiled widget exac
 
 ***Learn more***
 
-[Dependencies](/Widget_Dependencies.md)
++ [Dependencies](/Widget_Dependencies.md)
 
-[Server Script](/widget_server_script.md)
++ [Server Script](/widget_server_script.md)
 
-[CSS](/widget_css.md)
++ [CSS](/widget_css.md)
 
-[HTML](/widget_html.md)
++ [HTML](/widget_html.md)
 
-[Client Script](/widget_client_script.md)
++ [Client Script](/widget_client_script.md)
 
-[Server Script APIs](/widget_server_script_apis.md)
++ [Server Script APIs](/widget_server_script_apis.md)
