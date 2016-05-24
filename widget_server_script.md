@@ -11,13 +11,14 @@ if (input) {
 
 Server Side JavaScript executed within the context of the widget intance related to it.
 
--[Server-side variables](#server_side_variables)		
- -		
- -| Property | Description |		
- -| :------ | :----------- |		
- -| `input`   | An object containing client-side properties set under `c.data`. It will have an `undefined` value until the client-side controller calls `c.server.update()` |		
- -| `data`| An object containing properties set during server-side execution |		
- -| `option`    | An object containing the schema option properties |
+[Server-side variables](#server_side_variables)
+
+| Property | Description |
+| :------ | :----------- |
+| `input`   | An object containing client-side properties set under `c.data`. It will have an `undefined` value until the client-side controller calls `c.server.update()` |
+| `data` | An object containing properties set during server-side execution |
+| `option`    | An object containing the schema option properties |
+
 
 <table width="100%">
 	<tr>
