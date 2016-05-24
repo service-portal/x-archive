@@ -70,27 +70,14 @@ function() {
 }
 ```
 
-<table width="100%">
-	<tr>
-		<th valign="top" colspan="3" align="left"><a href="#special" name="special">Special Methods</a></th>
-	</tr>
-	<tr>
-		<th valign="top" width="120px" align="left">Property</th>
-		<th valign="top" align="left">Description</th>
-	</tr>
-	<tr>
-		<td valign="top"><code>this.server.get([Object])</code></td>
-		<td valign="top">Calls the server and sends custom <code>input</code>. Returns <code>Promise</code>.</td>
-	</tr>
-	<tr>
-		<td valign="top"><code>this.server.update()</code></td>
-		<td valign="top">Calls the server and <code>this.data</code> is automatically send to server side. Returns <code>Promise</code>.</td>
-	</tr>
-	<tr>
-		<td valign="top"><code>this.server.refresh()</code></td>
-		<td valign="top">Calls the server and automatically replaces the current options and data from the server response. Returns <code>Promise</code>.</td>
-	</tr>	
-</table>
+| Property | Description |
+| :------ | :----------- |
+| `this.server.get([Object])`  | Calls the server and sends custom `input`. Returns `Promise`. |
+| `this.server.update()` | Calls the server and `this.data` is automatically send to server side. Returns `Promise`. |
+| `this.server.refresh() `   | Calls the server and automatically replaces the current options and data from the server response. Returns `Promise` |
+
+
+
 
 #### Server Script
 This is where you put the server-side logic for your widget. This is helpful primarily with interacting with the Glide platform through our server-side APIs. If you have experience writing Javascript within our platform, you will have no problem writing server scripts.
