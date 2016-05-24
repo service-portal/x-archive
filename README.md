@@ -12,6 +12,8 @@ This reference guide contains documentation for Service Portal Developers.
 
 [Widget HTML](/widget_html.md)
 
+[Widget Client Script](/widget_client_script.md)
+
 
 
 ### Service Portal
@@ -40,25 +42,6 @@ clone the widget and give it another `name` and `id`.
 ### Widget Instance
 A widget instace is a reference to a widget that contains: location, properties and CSS especific for that instance. A widget used multiple times in the same page, will use multiple instances.
 
-#### Client Script
-This is where you should define the Controller function for your Widget. Consider every widget to be a custom Angular directive – you define the controller for that directive here. This is where you handle all the client-side logic and template binding for your widget.
-```javascript
-function() {	
-	var c = this;
-	c.update = function() {
-		c.data.price = false;
-		c.server.get({symbol: c.data.symbol}).then(function(r) {			
-			c.data.price = r.data.price;			
-		});
-	}
-}
-```
-
-| Property | Description |
-| :------ | :----------- |
-| `this.server.get([Object])`  | Calls the server and sends custom `input`. Returns `Promise`. |
-| `this.server.update()` | Calls the server and `this.data` is automatically send to server side. Returns `Promise`. |
-| `this.server.refresh() `   | Calls the server and automatically replaces the current options and data from the server response. Returns `Promise` |
 
 ### Embeded Widgets
 The spWidget directive takes a widget model and renders the compiled widget exactly where you put it in your HTML Template. 
