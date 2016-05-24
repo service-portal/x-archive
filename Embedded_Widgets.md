@@ -16,7 +16,7 @@ The widget model contains all of the client-side parts of a widget needed to cre
 Here is a detailed look at some of the fields in the widget model: 
 
 | Property name | Type | Description |
-| ------------- | ------------- |
+| ------------- | ---- | ----------- |
 | client_script | string | The widget's client script field |
 | css | string | The compiled css output from the widget's sass field |
 | data | object | The data object containing all of the keys and values added to it in the widget's server script |
@@ -41,7 +41,7 @@ spUtil.get( **string**, object )
 
 spUtil.get( string, **object** )
 
-> An object to post to the widget's server script. _refer to this object as **input** in your server script_**
+> An object to post to the widget's server script. _refer to this object as **input** in your server script_ **
 
 #### Getting a widget model from server script
 
