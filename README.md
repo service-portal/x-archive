@@ -6,7 +6,7 @@ This reference guide contains documentation for Service Portal Developers.
 ### Service Portal
 Service Portal contains of two parts: 
 - *Framework*: a set of APIs and Angular.js services and directives that help to render portals.
-- *Portals*: a group of pages linked by their `page id`. For example: `[instance]/sp_config` is a Portal that contains a set tools to help you configure and create and mantain widgets.
+- *Portals*: a group of pages linked by their `page id`. For example: `[your instance]/sp_config` is a Portal that contains a set tools to help you configure and create and mantain widgets.
 
 ### Portal Configuration
 
