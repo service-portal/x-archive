@@ -188,7 +188,7 @@ The spWidget directive takes a widget model and renders the compiled widget exac
 
 
 ### $sp API
-Service Portal probides a set of convenience methods found on the global `$sp` object, which is available in any widget server script.
+Service Portal provides a set of convenience methods found on the global `$sp` object, which is available in any widget server script.
 
 <table width="100%">
 	<tr>
