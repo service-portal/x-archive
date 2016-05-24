@@ -10,6 +10,8 @@ This reference guide contains documentation for Service Portal Developers.
 
 [Widget CSS](/widget_css.md)
 
+[Widget HTML](/widget_html.md)
+
 
 
 ### Service Portal
@@ -37,22 +39,6 @@ clone the widget and give it another `name` and `id`.
 
 ### Widget Instance
 A widget instace is a reference to a widget that contains: location, properties and CSS especific for that instance. A widget used multiple times in the same page, will use multiple instances.
-
-#### Widget HTML
-This is where the HTML markup for your widget goes. Inside the template , you can leverage AngularJS’s two-way binding to bind your controller variables to your markup. It uses the `controllerAs c` syntax for basic binding.
-```html
-<div>
-${Symbol Lookup}: 
-<input ng-model="c.data.symbol" 
-ng-model-options="{debounce: 750}" ng-change="c.update()" placeholder="Type stock symbol" />
-<div ng-show="c.data.symbol" style="font-size: 2em;">        
-  <p>${Stock Price}: 
-  	<span ng-if="!c.data.price">${Requesting stock price}</span><span>{{c.data.price | currency:"$"}}</span>
-  </p>
- <img ng-src="http://chart.finance.yahoo.com/z?s={{c.data.symbol}}&t=1d&z=l"/>
-</div>
-</div>
-```
 
 #### Client Script
 This is where you should define the Controller function for your Widget. Consider every widget to be a custom Angular directive – you define the controller for that directive here. This is where you handle all the client-side logic and template binding for your widget.
