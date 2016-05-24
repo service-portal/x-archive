@@ -35,10 +35,10 @@ spUtil.get("widget-sc-cat-item", {sys_id: "your_catalog_item_sys_id"}).then(func
 });
 ```
 
-spUtil.get( string `Can be a **Widget Id** or **Widget sys_id**`, object )
+spUtil.get( **string**, _object_ )
+> Can be a **Widget Id** or **Widget sys_id**
 
-spUtil.get( string, `object` )
-
+spUtil.get( _string_, **object** )
 > An object to post to the widget's server script. Refer to this object as **input** in your server script.
 
 ##### Getting a widget model from server script
