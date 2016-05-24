@@ -10,7 +10,7 @@ Use it like this:
 <sp-widget widget="c.myCatItemWidget"></sp-widget>
 ```
 
-### Widget Model
+#### Widget Model
 The widget model contains all of the client-side parts of a widget needed to create an angular directive. The HTML template, client script, and link function are loaded just as they are in the sp_widget record. The data property is the result of the widget's server script execution. Anything that you put on the data object on the server is available in the data object on the client.
 
 Here is a detailed look at some of the fields in the widget model: 
@@ -35,11 +35,14 @@ spUtil.get("widget-sc-cat-item", {sys_id: "your_catalog_item_sys_id"}).then(func
 });
 ```
 
-spUtil.get( **string**, _object_ )
+spUtil.get( **string** `Widget Id`, object ).then(callback)
 > Can be a **Widget Id** or **Widget sys_id**
 
-spUtil.get( _string_, **object** )
+spUtil.get( string, **object** `post data`).then(callback)
 > An object to post to the widget's server script. Refer to this object as **input** in your server script.
+
+spUtil.get( string, object ).then(function(**response**){} `callback`)
+> The response object contains the full widget model.
 
 ##### Getting a widget model from server script
 
