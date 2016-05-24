@@ -35,9 +35,7 @@ spUtil.get("widget-sc-cat-item", {sys_id: "your_catalog_item_sys_id"}).then(func
 });
 ```
 
-spUtil.get( `string`, object )
-
-> Can be a **Widget Id** or **Widget sys_id**
+spUtil.get( string `Can be a **Widget Id** or **Widget sys_id**`, object )
 
 spUtil.get( string, `object` )
 
