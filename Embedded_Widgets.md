@@ -29,7 +29,7 @@ Here is a detailed look at some of the fields in the widget model:
 How to get a widget model
 ------
 
-#### spUtil.get() - Get a widget model from client script
+#### spUtil.get() - Get a widget model via client script
 
 ```javascript
 spUtil.get("widget-sc-cat-item", {sys_id: "your_catalog_item_sys_id"}).then(function(response) {
@@ -45,7 +45,7 @@ spUtil.get("widget-sc-cat-item", {sys_id: "your_catalog_item_sys_id"}).then(func
 **Callback**  
 The callback function is called when the widget model is ready. The response object contains the full widget model.
 
-#### $sp.getWidget() - Get a widget model from server script
+#### $sp.getWidget() - Get a widget model via server script
 
 ```javascript
 data.catalogItemWidget = $sp.getWidget("widget-sc-cat-item", {sys_id: "your_catalog_item_sys_id"});
@@ -56,3 +56,10 @@ data.catalogItemWidget = $sp.getWidget("widget-sc-cat-item", {sys_id: "your_cata
 - (_object_) options  
    An object to pass to the widget's server script. Refer to this object as **options** in your server script.
 
+
+Examples
+------
+
+<a name="client_script" href="#client_script">An example using client script</a>
+
+<a name="server_script" href="#server_script">An example using server script</a>
