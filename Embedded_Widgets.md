@@ -41,7 +41,7 @@ spUtil.get( **string**, object )
 
 spUtil.get( string, **object** )
 
-> An object to post to the widget's server script. _refer to this object as **input** in your server script_ **
+> An object to post to the widget's server script. Refer to this object as **input** in your server script.
 
 ##### Getting a widget model from server script
 
