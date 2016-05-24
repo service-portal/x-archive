@@ -8,6 +8,8 @@ This reference guide contains documentation for Service Portal Developers.
 
 [Widget Server Script](/widget_server_script.md)
 
+[Widget CSS](/widget_css.md)
+
 
 
 ### Service Portal
