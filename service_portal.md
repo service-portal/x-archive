@@ -4,4 +4,5 @@ Service Portal contains of two parts:
 - *Portals*: a group of pages linked by their pageId. For example: `sp_config` is a Portal contains a set tools to help you configure and create and mantain widgets.
 
 ***Learn more***
+
 +[Portals](/portals.md)
