@@ -36,7 +36,7 @@ spUtil.get("widget-sc-cat-item", {sys_id: "your_catalog_item_sys_id"}).then(func
 ```
 **Parameters**
 - (_string_) widget\_id  
-   Can be a **Widget Id** or **Widget sys_id**
+   Can be a widget_id or widget sys_id.
 - (_object_) data  
    An object to post to the widget's server script. Refer to this object as **input** in your server script.
 
@@ -50,7 +50,7 @@ data.catalogItemWidget = $sp.getWidget("widget-sc-cat-item", {sys_id: "your_cata
 ```
 **Parameters**
 - (_string_) widget\_id  
-   Can be a **Widget Id** or **Widget sys_id**
+   Can be a widget_id or widget sys_id.
 - (_object_) options  
    An object to pass to the widget's server script. Refer to this object as **options** in your server script.
 
