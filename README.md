@@ -1,12 +1,12 @@
 # Service Portal Documentation
 This reference guide contains documentation for Service Portal Developers.
 
-This site is not endorsed by ServiceNow.
+This site is nonofficial and not endorsed by ServiceNow.
 
 ### Service Portal
 Service Portal contains of two parts: 
-- Framework: a set of APIs and Angular.js services and directives that help to render portals.
-- Portals. a group of pages linked by their pageId. For example: `sp_config` is a Portal contains a set tools to help you configure and create and mantain widgets.
+- *Framework*: a set of APIs and Angular.js services and directives that help to render portals.
+- *Portals*: a group of pages linked by their pageId. For example: `sp_config` is a Portal contains a set tools to help you configure and create and mantain widgets.
 
 ### Portal Configuration
 <table width="100%">
