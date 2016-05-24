@@ -90,29 +90,18 @@ if (input) {
 }
 ```
 
+[Server-side variables](#server_side_variables)
+
+| Property | Description |
+| :------ | :----------- |
+| `input`   | An object containing client-side properties set under `c.data`. It will have an `undefined` value until the client-side controller calls `c.server.update()` |
+| `data`| An object containing properties set during server-side execution |
+| `option`    | An object containing the schema option properties |
+| 4. Widget instance | CSS specific to the widget instance |
+
 Server Side JavaScript executed within the context of the widget intance related to it.
 
-<table width="100%">
-	<tr>
-		<th valign="top" colspan="3" align="left"><a href="#special" name="special">Server-side variables</a></th>
-	</tr>
-	<tr>
-		<th valign="top" width="120px" align="left">Property</th>
-		<th valign="top" align="left">Description</th>
-	</tr>
-	<tr>
-		<td valign="top"><code>input</code></td>
-		<td valign="top">An object containing client-side properties set under <code>c.data</code>. It will have an <code>undefined</code> value until the client-side controller calls <code>c.server.update()</code></td>
-	</tr>
-	<tr>
-		<td valign="top"><code>data</code></td>
-		<td valign="top">An object containing properties set during server-side execution</td>
-	</tr>
-	<tr>
-		<td valign="top"><code>option</code></td>
-		<td valign="top">An object containing the schema option properties</td>
-	</tr>	
-</table>
+
 
 <table width="100%">
 	<tr>
