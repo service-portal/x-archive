@@ -21,7 +21,7 @@ This reference guide contains documentation for Service Portal Developers.
 
   - [Server Script APIs](/widget_server_script_apis.md)
    
-+ [Custom Forms](/custom_forms.md)
++ [Create Forms](/create_forms.md)
 
 + [Debugging](/debugging.md)
 ___
