@@ -35,9 +35,9 @@ spUtil.get("widget-sc-cat-item", {sys_id: "your_catalog_item_sys_id"}).then(func
 });
 ```
 **Parameters**
-- widget\_id _string_  
+- (_string_) widget\_id  
    Can be a **Widget Id** or **Widget sys_id**
-- data _object_  
+- (_object_) data  
    An object to post to the widget's server script. Refer to this object as **input** in your server script.
 
 **callback**  
@@ -49,8 +49,8 @@ The callback function is called when the widget model is ready. The response obj
 data.catalogItemWidget = $sp.getWidget("widget-sc-cat-item", {sys_id: "your_catalog_item_sys_id"});
 ```
 **Parameters**
-- widget\_id _string_  
+- (_string_) widget\_id  
    Can be a **Widget Id** or **Widget sys_id**
-- options _object_  
+- (_object_) options  
    An object to pass to the widget's server script. Refer to this object as **options** in your server script.
 
