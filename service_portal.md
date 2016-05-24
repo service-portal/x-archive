@@ -5,5 +5,5 @@ Service Portal contains of two parts:
 
 ***Learn more:***
 
-+ [Portal](/portals.md)
++ [Portal](/portal.md)
 + [Widget](/widget.md)
