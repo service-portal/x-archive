@@ -1,6 +1,6 @@
 # Debugging
 
-Client Side
+## Client Side
 
 | Command / Function | Description |
 | :------ | :----------- |
@@ -9,7 +9,7 @@ Client Side
 | `debugger;` | Native to Chrome and Firefox to set a browser breakpoint, letting an admin step through script line by line |
 
 
-Server Side
+## Server Side
 
 
 | Command / Function | Description |
