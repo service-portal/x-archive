@@ -23,4 +23,4 @@ These are the configuration settings when you create a new portal.
 | Main menu | Reference to widget used for the menu |
 | Theme| Theme in use |
 
-You can access to all these properties from the Client Script using: `$scope.portal`
+You can access to all these properties from the [Client Script](widget_client_script.md) using: `$scope.portal`
