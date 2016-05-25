@@ -1,3 +1,5 @@
+# Debugging
+
 | Property | Description |
 | :------ | :----------- |
 | `console.log(String|Object)`   | Ouputs into the Browser console, server-side JavaScript objects and strings that can be displayed |
