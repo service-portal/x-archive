@@ -10,7 +10,7 @@ if (input) {
 }
 ```
 
-Server Side JavaScript executed within the context of the widget intance related to it.
+This code will be executed within the context of the widget intance related to it.
 
 [Server-side variables](#server_side_variables)
 
