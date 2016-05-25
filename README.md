@@ -15,7 +15,7 @@ If you can't find what are you looking for: open an issue. If you'd like to cont
 + [Widget](/widget.md)
   - [Dependencies](/widget_dependencies.md)
   - [Server Script](/widget_server_script.md)
-  - [CSS/SCSS](/widget_css.md)
+  - [CSS/SCSS](/css_scoped.md)
   - [HTML](/widget_html.md)
   - [Client Script](/widget_client_script.md)
   - [Server Script APIs](/widget_server_script_apis.md)
