@@ -5,7 +5,7 @@ This reference guide contains documentation for Service Portal Developers.
 + [Portal](/portal.md)
 + [Page](/page.md)
 + [Widget](/widget.md)
-  - [Dependencies](/Widget_Dependencies.md)
+  - [Dependencies](/widget_dependencies.md)
   - [Server Script](/widget_server_script.md)
   - [CSS/SCSS](/widget_css.md)
   - [HTML](/widget_html.md)
