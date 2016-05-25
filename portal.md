@@ -22,3 +22,5 @@ These are the configuration settings when you create a new portal.
 | Catalog home page | Service Catalog Home Page |
 | Main menu | Reference to widget used for the menu |
 | Theme| Theme in use |
+
+You can access to all these properties from the Client Script using: `$scope.portal`
