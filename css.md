@@ -9,7 +9,8 @@ Table of Contents
 1. [SCSS Basic](#scss)
 2. [List of functions][30]
 3. [List of mixins][31]
-4. [Scoped Page/Widget CSS][32]
+4. [Page CSS][40]
+5. [Widget CSS][41]
 
 <a name="scss">SCSS Primer</a>
 -----------
@@ -151,50 +152,18 @@ Here is the generated CSS:
 }
 ```
 
-##### <a name="import">Import</a>
+Additional Resources
+-----------
+* [MDN CSS Documentation][10]
+* [Sass/SCSS Reference][20]
 
-SCSS has an import option that lets you split your CSS into smaller, more maintainable portions. When rendering widgets, Service Portal will take the file that you want to import and combine it with the file you're importing into a sngle CSS file to the web browser.
-
-Here's an example of an `@import` in CSS using the [contrasted][22] mixin from [Compass][23]:
-
-``` scss
-$contrasted-dark-default: #333333;
-$contrasted-light-default: #e7e7e7;
-
-@import "/styles/scss/compass/compass/utilities/color/contrast";
-
-// contrasted() Sets the specified background color and calculates a dark or light contrasted text color.
-
-.example {
-    p.dark {
-        @include contrasted(#5f1210);
-    }
-    p.light {
-        @include contrasted(#fa9e9c);
-    }
-}
-```
-
-The generated CSS:
-
-``` css
-.example p.dark {
-	background-color: #5f1210;
-	color: #e7e7e7;
-}
-.example p.light {
-	background-color: #fa9e9c;
-	color: #333333;
-}
-```
 
 [10]: https://developer.mozilla.org/en-US/docs/Web/CSS
 
 [20]: http://sass-lang.com/documentation/file.SASS_REFERENCE.html
-[21]: http://sass-lang.com/documentation/Sass/Script/Functions.html
-[22]: http://compass-style.org/reference/compass/utilities/color/contrast/#mixin-contrasted
-[23]: http://compass-style.org/reference/compass/
 
 [30]: css_functions.md
 [31]: css_mixins.md
-[32]: css_scoped.md
+
+[40]: page_css.md
+[41]: widget_css.md
