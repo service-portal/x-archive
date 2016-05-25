@@ -1,4 +1,4 @@
-### Portal
+# Portal
 
 These are the configuration settings when you create a new portal.
 
