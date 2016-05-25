@@ -5,7 +5,7 @@ We will try to make the content as task oriented as possible in the sense that i
 
 This site was started on May 23rd to help answer some of the questions we've seen in emails, PRB tasks, and various community sites.   The content is very 'fluid' - subject to change frequently.   To get notifications of the changes, press the `watch` button in the upper right.
 
-If you can't find what are you looking for open an Issue. If you'd like to contribute please feel free to submit a pull request.
+If you can't find what are you looking for: open an issue. If you'd like to contribute please feel free to submit a pull request.
 
 ### Contents
 
