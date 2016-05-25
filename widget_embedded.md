@@ -2,7 +2,7 @@
 ## Embedded Widgets
 
 ### <sp-widget />
-You can embed any widget inside of your widget’s HTML template using the spWidget directive. This directive requires a complete widget model which you can get using [spUtil.get()](#get_one) on the client or [$sp.getWidget](#get_one) on the server.
+You can embed any widget inside of your widget’s HTML template using the `sp-widget` directive. This directive requires a complete widget model which you can get using [spUtil.get()](#get_one) on the client or [$sp.getWidget](#get_one) on the server script
 
 Use it like this:
 
