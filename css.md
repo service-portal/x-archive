@@ -3,6 +3,7 @@
 
 CSS rules for pages and widgets can be written using regular [CSS][10] or as [SCSS][20] syntax. Rules are scoped to the page or widget–this means that rules defined here affect just the page or widget and nothing else.
 
+
 Table of Contents
 -----------
 1. [SCSS Basic](#scss)
@@ -13,12 +14,11 @@ Table of Contents
 <a name="scss">SCSS Primer</a>
 -----------
 
-Service Portal SCSS supports the following:
+Service Portal SCSS is a subset of the [SASS Specification][20], the following are supported:
 - [Variables](#variables)
 - [Nesting](#nesting)
 - [Operators](#operators)
 - [Mixins](#mixins)
-- [Import](#import)
 
 ##### <a name="variables">Variables</a>
 
