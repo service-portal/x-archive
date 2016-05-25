@@ -25,11 +25,12 @@ Here is a detailed look at some of the fields in the widget model:
 | options | object | The options used to initialize the widget |
 | template | string | The widget's HTML Template field |
 
-<a name="get_one" href="#get_one"></a>  
-How to get a widget model
-------
 
-#### spUtil.get() - Get a widget model via client script
+
+<a name="get_one" href="#get_one"></a>   
+
+spUtil.get() - Get a widget model via client script
+------
 
 ```javascript
 spUtil.get("widget-sc-cat-item", {sys_id: "your_catalog_item_sys_id"}).then(function(response) {
@@ -37,29 +38,53 @@ spUtil.get("widget-sc-cat-item", {sys_id: "your_catalog_item_sys_id"}).then(func
 });
 ```
 **Parameters**
+
 - (_string_) widget\_id  
    Can be a widget_id or widget sys_id.
 - (_object_) data  
    An object to post to the widget's server script. Refer to this object as **input** in your server script.
 
 **Callback**  
+
 The callback function is called when the widget model is ready. The response object contains the full widget model.
 
-#### $sp.getWidget() - Get a widget model via server script
+
+$sp.getWidget() - Get a widget model via server script
+------
 
 ```javascript
 data.catalogItemWidget = $sp.getWidget("widget-sc-cat-item", {sys_id: "your_catalog_item_sys_id"});
 ```
-**Parameters**
-- (_string_) widget\_id  
-   Can be a widget_id or widget sys_id.
-- (_object_) options  
+**Parameters**  
+
+- (*string*) widget\_id  
+   Can be a widget_id or widget sys_id.  
+- (*object*) options  
    An object to pass to the widget's server script. Refer to this object as **options** in your server script.
 
 
 Examples
 ------
 
-<a name="client_script" href="#client_script">An example using client script</a>
+#### <a name="embedding_with_client_script" href="#embedding_with_client_script">#</a> Embedding a widget using client script
 
-<a name="server_script" href="#server_script">An example using server script</a>
+HTML Template
+
+```html
+<sp-widget widget="c.myClockWidget"></sp-widget>
+```
+Client Script
+
+```javascript
+function(spUtil) {
+	var c = this;
+	spUtil.get("widget-cool-clock", null).then(function(response){
+			c.myClockWidget = response;
+	});
+}
+```
+Result  
+
+![Clock](./assets/widget_embedded/cs_clock.png)
+
+#### <a name="embedding_with_server_script" href="#embedding_with_server_script">#</a> An example using server script
