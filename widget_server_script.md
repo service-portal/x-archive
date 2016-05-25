@@ -1,5 +1,5 @@
 #### Widget Server Script
-This is where you put the server-side logic for your widget. This is helpful primarily with interacting with the Glide platform through our server-side APIs. If you have experience writing Javascript within our platform, you will have no problem writing server scripts.
+This is where you put the server-side logic for your widget. This is helpful primarily with interacting with the Glide platform through ServiceNow [server-side APIs](http://wiki.servicenow.com/index.php?title=Server_API_Reference#gsc.tab=0). If you have experience writing Javascript within our platform, you will have no problem writing server scripts.
 ```javascript
 if (input) {
 	var r = new RESTMessage('Yahoo Finance', 'get');
