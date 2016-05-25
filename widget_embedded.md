@@ -134,7 +134,7 @@ Building on top of the previous example, now you will see how to embed the cool 
 > ![Cool clock client script](./assets/widget_embedded/example_clock_options_1.png)
 
 #### Part 1
-Use the following code to provide the zone option when you fetch the widget:
+Use the following code to provide the c_color option when you fetch the widget:
 
 Server Script
 
@@ -208,7 +208,7 @@ Server Script
 Result  
 In a new browser window go to: /$sp.do?id=embedded_clock  
 
-Each instance of the clock widget uses its provided timezone and title.
+Each instance of the clock widget has a different timezone and title.
 
 ![Embedded clock](./assets/widget_embedded/example_clock_options_2.png)
 
