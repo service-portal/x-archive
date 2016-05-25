@@ -68,11 +68,35 @@ Examples
 
 #### <a name="embedding_with_client_script" href="#embedding_with_client_script">#</a> Embedding a widget using client script
 
+This example will show you how to create a new widget and test page, and how to embed the cool clock widget in a bootstrap panel.
+
+1. First go to the widget editor: /sp_config?id=widget_editor
+
+2. Click "Create a new widget" and use the following values  
+   **Widget Name:** Embedded clock  
+   **Widget Id:** embedded_clock  
+   **Create a test page:** True  
+   **Page Id:** embedded_clock  
+   
+   ![New widget dialog](./assets/widget_embedded/example_clock_1.png)
+3. Click Submit
+
+Now, copy the following code blocks into your new embedded clock widget:
+
+
 HTML Template
 
 ```html
-<sp-widget widget="c.myClockWidget"></sp-widget>
+<div class="my-clock">
+	<div class="panel panel-default ">
+		<div class="panel-heading">Time in San Diego</div>
+		<div class="panel-body">
+			<sp-widget widget="c.myClockWidget"></sp-widget>
+		</div>
+	</div>
+</div>
 ```
+<br />
 Client Script
 
 ```javascript
@@ -83,8 +107,20 @@ function(spUtil) {
 	});
 }
 ```
-Result  
+<br />
+CSS  
 
-![Clock](./assets/widget_embedded/cs_clock.png)
+```css
+.my-clock {
+	margin: 25px;
+	width: 300px;
+	height: 300px;
+}
+```
+<br />
+Result  <br />
+In a new browser window go to: /$sp.do?id=embedded_clock  
+
+![Embedded clock](./assets/widget_embedded/example_clock_2.png)
 
 #### <a name="embedding_with_server_script" href="#embedding_with_server_script">#</a> An example using server script
