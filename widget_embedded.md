@@ -129,7 +129,7 @@ In a new browser window go to: /$sp.do?id=embedded_clock
 
 Building on top of the previous example, now you will see how to embed the cool clock widget with custom options. Each instance of the clock is provided a different timezone and title. 
 
-> To see what options you can configure, open the cool clock widget in the widget editor to see how it uses the options object for the title, second hand color, and the timezone. 
+> To see what options are configurable in the cool clock widget, open it in the widget editor. It uses the options object for the title, second hand color, and the timezone. This screenshot shows you where they're hiding.
 
 > ![Cool clock client script](./assets/widget_embedded/example_clock_options_1.png)
 
