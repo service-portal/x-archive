@@ -3,7 +3,9 @@ Here you will find unofficial documentation for the ServiceNow Service Portal te
 
 We will try to make the content as task oriented as possible in the sense that if you have a question about how to get started doing something - embedding a widget in another, setting a breakpoint in the client script, etc we hope you find it here and that it gets you on the road to success quickly.   
 
-This site was started on May 23rd to help answer some of the questions we've seen in emails, PRB tasks, and various community sites.   The content is very 'fluid' - subject to change frequently.   To get notifications of the changes, press the star button in the upper right. 
+This site was started on May 23rd to help answer some of the questions we've seen in emails, PRB tasks, and various community sites.   The content is very 'fluid' - subject to change frequently.   To get notifications of the changes, press the `watch` button in the upper right.
+
+If you can't find what are you looking for open an Issue. If you'd like to contribute please feel free to submit a pull request.
 
 ### Contents
 
