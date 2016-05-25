@@ -2,8 +2,8 @@
 
 | Command / Function | Where Used | Description |
 | :------ | :----------- | :------------ |
-| `console.log(String|Object)`   | Server Script, Client Controller | Outputs into the Browser console, server-side JavaScript objects and strings that can be displayed. When used in the Client Controller, this command is native to the browser. |
-| `$sp.log(String|Object)` | Server Script | Outputs into the Java console, server-side JavaScript objects and strings that can be displayed |
+| `console.log(String|Object)`   | Server Script, Client Controller | Outputs to the browser console. When used in the Server Script, can log server-side JavaScript Objects and Strings. When used in the Client Controller, this command is native to the browser. |
+| `$sp.log(String|Object)` | Server Script | Outputs to a Service Portal page. Can log server-side JavaScript Objects and Strings. Similar to `gs.addInfoMessage(String)`, but only outputs if user has `sp_admin` role or is impersonating. |
 | `debugger` | Client Controller | Native to Chrome and Firefox to set a browser breakpoint, letting an admin step through script line by line |
 | `gs.print(String)` | Server Script | Normal ServiceNow function to output text to the Java console. |
 | `gs.log(String)` | Server Script | Normal ServiceNow function to output text to both the Java console and the `syslog` database table. |
