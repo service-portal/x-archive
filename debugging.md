@@ -4,7 +4,7 @@ Client Side
 
 | Command / Function | Description |
 | :------ | :----------- |
-| `console.log(String|Object)`   | Outputs to the browser console. When used in the Server Script, can log server-side JavaScript Objects and Strings. When used in the Client Controller, this command is native to the browser. |
+| `console.log(String|Object)`   | Outputs to the browser console. When used in the Client Controller, this command is native to the browser. |
 | `<pre>{{data|json}}</pre>` | Add this to the template. Uses Angular [json filter](https://docs.angularjs.org/api/ng/filter/json) to display content of `data` object in an easy-to-read fashion |
 | `debugger;` | Native to Chrome and Firefox to set a browser breakpoint, letting an admin step through script line by line |
 
