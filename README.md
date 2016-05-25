@@ -3,9 +3,9 @@ This reference guide contains documentation for Service Portal Developers.
 
 + [Service Portal](/service_portal.md)
 
-+ [Portal](/portal.md)
++ [Portals](/portals.md)
 
-+ [Page](/page.md)
++ [Pages](/pages.md)
 
 + [Widget](/widget.md)
 
