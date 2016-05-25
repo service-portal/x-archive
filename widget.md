@@ -14,7 +14,7 @@ The spWidget directive takes a widget model and renders the compiled widget exac
 
   - [Dependencies](/widget_dependencies.md)
   - [Server Script](/widget_server_script.md)
-  - [CSS/SCSS](/widget_css.md)
+  - [CSS/SCSS](/css.md)
   - [HTML](/widget_html.md)
   - [Client Script](/widget_client_script.md)
   - [Server Script APIs](/widget_server_script_apis.md)
