@@ -4,7 +4,7 @@ These are the configuration settings when you create a new portal.
 
 | Property | Description |
 | :------ | :----------- |
-| Title   | The Portal title. This is how the page will render the title: `html<title>{Portal Title} - {Page Title}</title>` |
+| Title   | The Portal title. This is how the page will render the title: `<title>{Portal Title} - {Page Title}</title>` |
 | Url Suffix | Used to identify the portal. This is the directory name: `[instance:port]/url_suffix/` |
 | Homepage    | First page associated to this portal. |
 | Knowledge base | Default knowledge base |
