@@ -8,8 +8,6 @@ This site was started on May 23rd to help answer some of the questions we've see
 
 If you can't find what are you looking for: open an issue. If you'd like to contribute please feel free to submit a pull request.
 
-![Service Portal](/assets/home/sp-home.png)
-
 ### Contents
 
 + [Service Portal](/service_portal.md)
