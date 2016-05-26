@@ -1,5 +1,5 @@
 ## Header and Footer
-Header and footer are set under the *theme*. Headers and footers are just a widget that get included into the page using the theme settings.
+Header and footer are set under the *theme*. Headers and footers are just a widget defined under the theme settings.
 
 ![theme](/assets/layout/theme.png) 
 
