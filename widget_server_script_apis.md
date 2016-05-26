@@ -72,3 +72,6 @@ HTML Template
 	<a href="?id={{::c.data.homepage}}">Click here to go home</a>
 </div>
 ```
+<br/>
+Result
+![Screenshot](./assets/widget_server_script_apis/getPortalRecord.png)
