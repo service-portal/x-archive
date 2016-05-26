@@ -12,7 +12,7 @@ if (input) {
 
 This code will be executed within the context of the widget intance related to it.
 
-## Server-side variables
+## Server-side properties and helpers
 
 | Property | Description |
 | :------ | :----------- |
