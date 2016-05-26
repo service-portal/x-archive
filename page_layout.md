@@ -1,4 +1,5 @@
-# Page Layout
+## Header and Footer
+The Header and footer are set under the *theme*. 
 
 ## Custom Layout
 Service Portal uses [Bootstrap](http://getbootstrap.com/css/) layout by default. In order to add a widget, you must add first a container and then a row and a set of columns. The bootstrap will work for most of the cases but if you needto have a custom layout, for example you want to use flexbox instead of containers you can. Mark the *bootstrap alternative* option.  
