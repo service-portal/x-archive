@@ -2,7 +2,7 @@
 # Embedded Widgets
 
 ## \<sp-widget />
-You can embed any widget inside of your widget’s [HTML template](widget_html.md) using the `sp-widget` directive. This directive requires a complete widget model which you can get using [spUtil.get()](#client-get) on the client or [$sp.getWidget](#server_get) in the [server script](/widget_server_script.md). The basic usage looks like this:
+You can embed any widget inside of your widget’s [HTML template](widget_html.md) using the `sp-widget` directive. This directive requires a complete widget model which you can get using [spUtil.get()](#client-side) on the client or [$sp.getWidget](#server-side) in the [server script](/widget_server_script.md). The basic usage looks like this:
 
 HTML Template  
 
@@ -216,7 +216,7 @@ Each instance of the clock widget has a different timezone and title.
 <br/><br/>
 ## API Reference
 
-#### Client Get
+### Client Side
 #### spUtil.get() - Get a widget model via client script
 
 ```javascript
@@ -236,6 +236,8 @@ spUtil.get("widget-sc-cat-item", {sys_id: "your_catalog_item_sys_id"}).then(func
 The callback function is called when the widget model is ready. The response object contains the full widget model.
 
 <br/><br/>
+
+### Server Side
 #### $sp.getWidget() - Get a widget model via server script
 
 ```javascript
