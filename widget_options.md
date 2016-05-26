@@ -39,8 +39,6 @@ function() {
 })();
 ```
 
-Simple!
-
 #### Default Options
 
 Before an option value is set on an instance, it will appear as an undefined value when you access that option variable. Therefore, it's a good idea to specify default values for your options in the server script of a widget (to handle the situation where those option values haven't been provided yet).
