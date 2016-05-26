@@ -1,5 +1,5 @@
 #### Client Script
-This is where you should define the Controller function for your Widget. Consider every widget to be a custom Angular directive – you define the controller for that directive here. This is where you handle all the client-side logic and template binding for your widget.
+This is the controller already linked to the widget. Consider every widget to be an Angular directive – you define the controller for that directive here. This is where you handle all the client-side logic and template binding for your widget.
 ```javascript
 function() {	
 	var c = this;
