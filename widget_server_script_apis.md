@@ -3,10 +3,10 @@ Service Portal provides a set of convenience methods found on the global `$sp` o
 
 | Method | Description |
 | :------ | :----------- |
-| `getPortalRecord()`   | Returns the portal's GlideRecord |
-| `getValue(/*String*/ name)` | Returns the value of the specified field. Null if the request does not exist or has no such parameter, the instance does not exist or has no such parameter, or the portal is null or has no such parameter |
-|`getWidgetParameters()`|Returns the widget's parameters in an object, or an empty object if the widget has no parameters.|
-|`getDisplayValue(/*String*/ name)`|Returns the display value of the specified parameter. Returns an empty string if the request, instance, and portal do not exist. Returns null if the request exists but has no such parameter, or the instance exists but has no such parameter.|
+| [getPortalRecord()](#getPortalRecord)   | Returns the portal's GlideRecord |
+| getValue( **string** key ) | Returns the value of the specified field. Null if the request does not exist or has no such parameter, the instance does not exist or has no such parameter, or the portal is null or has no such parameter |
+| getWidgetParameters() | Returns the widget's parameters in an object, or an empty object if the widget has no parameters.|
+| getDisplayValue( **string** name ) | Returns the display value of the specified parameter. Returns an empty string if the request, instance, and portal do not exist. Returns null if the request exists but has no such parameter, or the instance exists but has no such parameter.|
 |`getValues(/*Scriptable*/ data, /*String*/ names)`|Copies values from the request or instance into the data parameter. Returns void.|
 |`getValues(/*Scriptable*/ data)`|Copies values from the instance GlideRecord into the data parameter. Returns void.|
 |`getRecordValues(/*Scriptable*/ data, /*GlideRecord*/ from, /*String*/ names)`|Copies values of the specified field names into the data parameter. Returns void.|
@@ -49,3 +49,26 @@ Service Portal provides a set of convenience methods found on the global `$sp` o
 |`getMenuItems(/*String*/ sys_id)`|Returns the menu items for the specified instance|
 |`getMenuHREF(/*GlideRecord*/ gr)`|Builds the href (?id=) portion of the URL for the specifed page|
 |`log(/*Object*/ message)`|Sends the message to the console log|
+
+<a name="getPortalRecord" href="#getPortalRecord">#</a> $sp.getPortalRecord()
+------
+Useful for getting the current portal context. It returns the sp_portal GlideRecord if there is one.
+
+Server Script
+
+```javascript
+(function() {
+	var portalGr = $sp.getPortalRecord();
+	data.logo = portalGr.getDisplayValue("logo");
+	data.homepage = portalGr.getDisplayValue("homepage.id");
+})();
+```
+<br />
+HTML Template
+
+```html
+<div>
+	<img ng-src="{{::c.data.logo}}" />
+	<a href="?id={{::c.data.homepage}}">Click here to go home</a>
+</div>
+```
