@@ -12,10 +12,12 @@ A widget instace is a reference to a widget that contains: location, properties 
 
 ***Learn more:***
 
-  - [HTML](widget_html.md)
-  - [Client Script](widget_client_script.md)
-  - [Server Script](widget_server_script.md)  
-  - [Dependencies](widget_dependencies.md)
-  - [CSS/SCSS](css.md)
-  - [Embedded Widgets] (widget_embedded.md)
-  - [Server Script APIs](widget_server_script_apis.md)
+  - [HTML](/widget_html.md)
+  - [Client Script](/widget_client_script.md)
+  - [Server Script](/widget_server_script.md)  
+  - [Dependencies](/widget_dependencies.md)
+  - [CSS/SCSS](/css.md)
+  - [Embedded Widgets] (/widget_embedded.md)
+  - [Server Script APIs](/widget_server_script_apis.md)
+  - [Instances](/widget_instances.md)
+  - [Options](/widget_options.md)
