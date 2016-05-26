@@ -6,6 +6,7 @@ Header and footer are set under the *theme*. A header or a footer are just a wid
 
 ## Subheader
 You can define a page container as a subheader like this:
+![move to header](/assets/layout/move-to-header.png) 
 
 
 ## Custom Layout
