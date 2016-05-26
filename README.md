@@ -13,6 +13,8 @@ If you can't find what are you looking for: open an issue. If you'd like to cont
 + [Service Portal](/service_portal.md)
 + [Portal](/portal.md)
 + [Page](/page.md)
+  - [Layout](page_layout.md)
+  - [CSS](/page_css.md)
 + [Widget](/widget.md)
   - [HTML](widget_html.md)
   - [Client Script](widget_client_script.md)
