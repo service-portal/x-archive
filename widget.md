@@ -9,6 +9,8 @@ Since widgets are `read-only` to benefit from future updates, you can't update t
 Once you drop a widget into a column using the Service Portal Designer it will create a widget instance.
 A widget instace is a reference to a widget that contains: location, properties and CSS especific for that instance. A widget used multiple times in the same page, will use multiple instances.
 
+![Widget Instance](/assets/widget/widget-instance.png)
+
 
 ***Learn more:***
 
