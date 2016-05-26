@@ -1,4 +1,4 @@
-#### Widget Server Script
+# Widget Server Script
 This is where you put the server-side logic for your widget. This is helpful primarily with interacting with the Glide platform through ServiceNow [server-side APIs](http://wiki.servicenow.com/index.php?title=Server_API_Reference#gsc.tab=0). 
 
 ```javascript
@@ -12,7 +12,7 @@ if (input) {
 
 This code will be executed within the context of the widget intance related to it.
 
-[Server-side variables](#server_side_variables)
+## Server-side variables
 
 | Property | Description |
 | :------ | :----------- |
