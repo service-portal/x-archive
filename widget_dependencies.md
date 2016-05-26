@@ -1,5 +1,5 @@
 ## Widget Dependencies
-In Service Portal, it is possible to link Javascript and CSS files to widgets. This allows developers to create dependencies between their widgets and third party libraries, external style sheets, and angular modules. Dependencies are only fetched from the server at the time that they are needed, which keeps initial page loads very fast. 
+In Service Portal, it is possible to link Javascript and CSS files to widgets. This allows developers to create dependencies between their widgets and third party libraries, external style sheets, and angular modules. Dependencies are loaded asynchronous from the server at the time that they are needed.
 
 Following is a step-by-step guide on creating new dependency packages and associating them with widgets.
 
