@@ -14,4 +14,4 @@ Service Portal uses [Bootstrap](http://getbootstrap.com/css/) layout by default.
 
 ![Bootstrap Alternative](/assets/layout/bootstrap-alternative.png) 
 
-This option will get rid of the container class. Now you can add a *CSS class* to the container to add a different behavior
+This option will get rid of the container class. Now you can add a *CSS class* to the container to have a different layout.
