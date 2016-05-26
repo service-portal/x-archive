@@ -10,7 +10,7 @@ if (input) {
 }
 ```
 
-This code will be executed within the context of the widget intance related to it.
+This code will be executed within the context of the widget instance related to it.
 
 ### Server-side properties and helpers
 
