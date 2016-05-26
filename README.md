@@ -23,6 +23,8 @@ If you can't find what are you looking for: open an issue. If you'd like to cont
   - [CSS/SCSS](css.md)
   - [Embedded Widgets] (widget_embedded.md)
   - [Server Script APIs](widget_server_script_apis.md)
+  - [Instances](/widget_instances.md)
+  - [Options](/widget_options.md)
 + [Create Forms](/create_forms.md)
 + [Sass Support](css.md)
 + [Debugging](/debugging.md)
