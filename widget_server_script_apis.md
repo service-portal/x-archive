@@ -3,24 +3,25 @@ Service Portal provides a set of convenience methods found on the global `$sp` o
 
 | Method | Description |
 | :------ | :----------- |
-| canReadRecord(GlideRecord): boolean | Returns true if the user can read the specified GlideRecord. |
-| canReadRecord(String, String): boolean | Returns true if the user can read the specified GlideRecord. |
-| getCatalogItem(String): Object | Returns the catalog item |
-| [getDisplayValue](#getDisplayValue)(String): String | Like [getValue](#getValue) except that it returns the display value.|
-| getField(GlideRecord, String) | Returns the field's information|
-| getFields(GlideRecord, String) | Checks the specified field names, and returns a comma seperated list of valid names. |
-| getFieldsObject(GlideRecord, String) | Checks the specified field names, and returns an object containing the valid names. |
-| getForm(String table, String sys_id, /*Optional String*/ encodedQuery, /*Optional String*/ view)|Returns the form|
-| getListColumns(String tableName, String view)|Returns a list of the specified table's columns in the specified view|
-| getMenuItems (String sys_id) | Returns the menu items for the specified instance|
-| getMenuHREF (GlideRecord gr)|Builds the href (?id=) portion of the URL for the specifed page |
-| [getPortalRecord](#getPortalRecord)(): GlideRecord   | Returns the portal's GlideRecord |
-| [getRecord](#getRecord)() | GlideRecord for instance / input parms. Returns null if the GlideRecord cannot be found.|
-| [getRecordDisplayValues](#getRecordDisplayValues) (Object, GlideRecord, String): void |Copies display values of the specified field names into the data parameter. |
-| [getRecordElements](#getRecordElements)(Object, GlideRecord, String): void | Copies the record element's name, display value, and value into the data parameter. |
-| [getRecordValues](#getRecordValues) (Object, GlideRecord, String): void | Copies values of the specified field names into the data parameter. Field names should be a comma separated string. |
-| getStream(String table, String sys_id)|Get the activity stream for a record.|
-| getUserInitials () | Returns the user's initials as a string |
+| [canReadRecord](#canReadRecord)(GlideRecord): boolean | Returns true if the user can read the specified GlideRecord. |
+| [canReadRecord](#canReadRecord)(String, String): boolean | Returns true if the user can read the specified GlideRecord. |
+| [getCatalogItem](#getCatalogItem)(String): Object | Returns a model and view model for a sc_cat_item or sc_cat_item_guide. |
+| [getDisplayValue](#getDisplayValue)(String): String | Like [getValue](#getValue) except that it returns the display value. |
+| [getField](#getField)(GlideRecord, String): Object | Returns {label, value, displayValue, type} for a given field on a GlideRecord. |
+| [getFields](#getFields)(GlideRecord, String): Array | Like getField Checks the specified field names, and returns a comma seperated list of valid names. |
+| [getFieldsObject](#getFieldsObject)(GlideRecord, String) | Checks the specified field names, and returns an object containing the valid names. |
+| [getForm](#getForm)(String table, String sys_id, /*Optional String*/ encodedQuery, /*Optional String*/ view)|Returns the form|
+| [getListColumns](#getListColumns)(String tableName, String view): |Returns a list of the specified table's columns in the specified view|
+| [getMenuItems](#getMenuItems)(String sys_id): Array | Returns the menu items for the specified instance |
+| [getMenuHREF](#getMenuHREF)(GlideRecord): String | Returns the (?id=) portion of the URL based on the sp_menu type. |
+| [getParameter](#getParameter)(String): String | Returns the value of a given key from the query string or post body. |
+| [getPortalRecord](#getPortalRecord)(): GlideRecord  | Returns the portal's GlideRecord. |
+| [getRecord](#getRecord)(): Glide | Returns the GlideRecord for the current sp_instance\*. Returns null if the widget is embedded by another widget. |
+| [getRecordDisplayValues](#getRecordDisplayValues) (Object, GlideRecord, String): void | Copies display values for the specified field names from a GlideRecord into the data parameter. |
+| [getRecordElements](#getRecordElements)(Object, GlideRecord, String): void | Copies the value and display value for the specified field names from a GlideRecord into the data parameter. |
+| [getRecordValues](#getRecordValues) (Object, GlideRecord, String): void | Copies values for the specified field names from a GlideRecord into the data parameter. |
+| getStream(String, String): Object | Get the activity stream for a record. |
+| getUserInitials() | Returns the user's initials as a string. |
 | [getValue](#getValue)(String): Object | Returns a value from an object or GlideRecord in this order: <br/>1. The http request<br/> 2. The widget's sp_instance* record<br/>3. The current sp_portal record<br />or returns null |
 | [getValues](#getValues)(Object, String): void | Copies values from the request or instance into the data parameter. |
 | [getValues](#getValues)(Object): void | Copies values from the widget's sp_instance GlideRecord into the data parameter. |
