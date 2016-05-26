@@ -19,4 +19,4 @@ This code will be executed within the context of the widget intance related to i
 | `input`   | An object containing client-side properties set under `c.data`. It will have an `undefined` value until the client-side controller calls `c.server.update()` |
 | `data` | An object containing properties set during server-side execution |
 | `option`    | An object containing the schema option properties |
-| [`$sp`](/widget_server_script_apis.md) | Global object used to access server script API |
+| [`$sp`](/widget_server_script_apis.md) | Helper class used to access server script API |
