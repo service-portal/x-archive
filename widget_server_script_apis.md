@@ -104,7 +104,7 @@ Useful for quickly determining if a record is valid and if the logged-in user ha
 		- (*String*) sys_id  
 		 The record sys_id to query.
 	- **Returns**
-		- (*Boolean*) True is the record is valid and readable
+		- (*Boolean*) True if the record is valid and readable
 
 Server Script
 
