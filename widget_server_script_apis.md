@@ -71,6 +71,68 @@ Gets a widget by id or sys_id, executes that widget's server script using the pr
 	- **Returns**  
 		- (*Object*) A widget model to be used with \<sp-widget />.
 
+Server Script
+
 ```javascript
-var w = $sp.getWidget('widget_id', {p1: param1, p2: param2});
+data.myWidget = $sp.getWidget('widget_id', {p1: param1, p2: param2});
 ```
+<br />
+HTML Template
+
+```html
+<sp-widget widget="c.data.myWidget"></sp-widget>
+```
+<br />
+For more information and examples refer to the [Embedded Widgets guide](/widget_embedded.md).
+
+<a name="canReadRecord"></a> $sp.canReadRecord()
+-----
+Useful for quickly determining if a record is valid and if the logged-in user has access to it. 
+
+> If the record type is kb_knowledge, sc_cat_item, or sc_category it also checks if the user can view that item.
+
+- $sp.canReadRecord( gr ): Boolean
+	- **Parameters**
+		- (*GlideRecord*) gr  
+		 A glide record
+	- **Returns**
+		- (*Boolean*) True if the record is valid and readable 
+- $sp.canReadRecord( table, sys_id ): Boolean
+	- **Parameters**
+		- (*String*) table  
+		 A table name to query.
+		- (*String*) sys_id  
+		 The record sys_id to query.
+	- **Returns**
+		- (*Boolean*) True is the record is valid and readable
+
+Server Script
+
+```javascript
+data.items = [];
+data.userName = gs.getUserDisplayName();
+var gr = new GlideRecord("sc_cat_item");
+gr.query();
+while(gr.next() && data.items.length < 10) {
+	if ($sp.canReadRecord(gr)) {
+		data.items.push(gr.getDisplayValue("name"));
+	}
+}
+```
+<br />
+HTML Template
+
+```html
+<div class="panel panel-default">
+	<div class="panel-heading">Hi, {{c.data.userName}}!</div>
+	<div class="panel-body">
+		Here are some things you can order:
+		<ul><li ng-repeat="item in c.data.items">{{item}}</li></ul>
+	</div>
+</div>
+```
+<br/>
+Result
+![Screenshot](./assets/widget_server_script_apis/canReadRecord.png)
+
+> Notice how the list of items is different based on the logged in user
