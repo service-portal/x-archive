@@ -1,4 +1,4 @@
-# Service Portal Documentation (work in progress)
+# Service Portal Documentation
 
 Here you will find unofficial documentation for the ServiceNow Service Portal technology.   The materials here have been written by the developers for the developers.  In other words, if you are going to be writing widgets, you are in the right place.
 
