@@ -3,8 +3,7 @@ Service Portal provides a set of convenience methods found on the global `$sp` o
 
 | Method | Description |
 | :------ | :----------- |
-| [canReadRecord](#canReadRecord)(GlideRecord): boolean | Returns true if the user can read the specified GlideRecord. |
-| [canReadRecord](#canReadRecord)(String, String): boolean | Returns true if the user can read the specified GlideRecord. |
+| [canReadRecord](#canReadRecord)(Mixed, *opt String*): boolean | Returns true if the user can read the specified GlideRecord. |
 | [getCatalogItem](#getCatalogItem)(String): Object | Returns a model and view model for a sc_cat_item or sc_cat_item_guide. |
 | [getDisplayValue](#getDisplayValue)(String): String | Like [getValue](#getValue) except that it returns the display value. |
 | [getField](#getField)(GlideRecord, String): Object | Returns {label, value, displayValue, type} for a given field on a GlideRecord. |
@@ -27,11 +26,15 @@ Service Portal provides a set of convenience methods found on the global `$sp` o
 | [getValues](#getValues)(Object): void | Copies values from the widget's sp_instance GlideRecord into the data parameter. |
 | [getWidget](#getWidget)(String, Object): Object | Returns a widget model for embedding a widget inside another widget. |
 
-<a name="getPortalRecord"></a> $sp.getPortalRecord
+<a name="getPortalRecord"></a> $sp.getPortalRecord()
 ------
-$sp.getPortalRecord(): GlideRecord
-
 Useful for getting the current portal context. It returns the sp_portal GlideRecord if there is one.
+
+- $sp.getPortalRecord( )  
+	- **Parameters**
+		- None  
+	- **Returns**
+		- (*GlideRecord*) The sp_portal record of the current portal context or null.
 
 Server Script
 
@@ -55,23 +58,18 @@ HTML Template
 Result
 ![Screenshot](./assets/widget_server_script_apis/getPortalRecord.png)
 
-<a name="getWidget"></a> $sp.getWidget
+<a name="getWidget"></a> $sp.getWidget()
 -----
-
-$sp.getWidget(String, Object): Object
-
 Gets a widget by id or sys_id, executes that widget's server script using the provided options, then returns the widget model.
 
-**Parameters**  
-
-- (*String*) widget\_id  
-   Can be a widget_id or widget sys_id.  
-- (*Object*) options  
-   An object to pass to the widget's server script. Refer to this object as **options** in your server script.
-   
-**Returns**  
-
-A widget model to be used with \<sp-widget />.
+- $sp.getWidget( widget_id, options ): Object
+	- **Parameters**
+		- (*String*) widget\_id  
+		Can be a widget_id or widget sys_id.  
+		- (*Object*) options  
+		An object to pass to the widget's server script. Refer to this object as **options** in your server script.
+	- **Returns**  
+		- (*Object*) A widget model to be used with \<sp-widget />.
 
 ```javascript
 var w = $sp.getWidget('widget_id', {p1: param1, p2: param2});
