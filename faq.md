@@ -1,7 +1,7 @@
 ## Are Order Guides supported?
 Yes. Order Guides are supported on the sc_cat_item_guide page. We fixed the catalog item linking issue in Helsinki Patch 1 so until that's released, make sure you access order guide items like this: 
 
-[instance].service-now.com/sp?id=sc_cat_item_guide&sys_id=...
+`[instance].service-now.com/sp?id=sc_cat_item_guide&sys_id=...`
 
 ## Are Catalog Client Scripts supported? How can I make them work?
 Service Portal only executes client scripts with the UI Type of "Both" or "Mobile". Read more about what's supported and what's not in the Mobile client scripting runtime here: http://wiki.servicenow.com/index.php?title=Mobile_Client_GlideForm_(g_form)_Scripting#gsc.tab=0 
