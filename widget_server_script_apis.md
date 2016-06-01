@@ -6,7 +6,7 @@ Service Portal provides a set of convenience methods found on the global `$sp` o
 | [canReadRecord](#canReadRecord)(Mixed, *opt String*): boolean | Returns true if the user can read the specified GlideRecord. |
 | [getCatalogItem](#getCatalogItem)(String): Object | Returns a model and view model for a sc_cat_item or sc_cat_item_guide. |
 | [getDisplayValue](#getDisplayValue)(String): String | Like [getValue](#getValue) except that it returns the display value. |
-| [getField](#getField)(GlideRecord, String): Object | Returns {label, value, displayValue, type} for a given field on a GlideRecord. |
+| [getField](#getField)(GlideRecord, String): Object | Returns {display_value, label, type, value} for a given field on a GlideRecord. |
 | [getFields](#getFields)(GlideRecord, String): Array | Like getField Checks the specified field names, and returns a comma seperated list of valid names. |
 | [getFieldsObject](#getFieldsObject)(GlideRecord, String) | Checks the specified field names, and returns an object containing the valid names. |
 | [getForm](#getForm)(String table, String sys_id, /*Optional String*/ encodedQuery, /*Optional String*/ view)|Returns the form|
