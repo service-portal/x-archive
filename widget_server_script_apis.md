@@ -5,7 +5,7 @@ Service Portal provides a set of convenience methods found on the global `$sp` o
 | :------ | :----------- |
 | [canReadRecord](#canReadRecord)(Mixed, *opt String*): boolean | Returns true if the user can read the specified GlideRecord. |
 | [getCatalogItem](#getCatalogItem)(String): Object | Returns a model and view model for a sc_cat_item or sc_cat_item_guide. |
-| [getDisplayValue](#getDisplayValue)(String): String | Like [getValue](#getValue) except that it returns the display value. |
+| [getDisplayValue](#getDisplayValue)(String): String | Returns a display value from a field on a record in this order: <br/>1. The widget's sp_instance* record<br/>2. The current sp_portal record<br />or returns null |
 | [getField](#getField)(GlideRecord, String): Object | Returns {label, value, displayValue, type} for a given field on a GlideRecord. |
 | [getFields](#getFields)(GlideRecord, String): Array | Like getField Checks the specified field names, and returns a comma seperated list of valid names. |
 | [getFieldsObject](#getFieldsObject)(GlideRecord, String) | Checks the specified field names, and returns an object containing the valid names. |
@@ -21,7 +21,7 @@ Service Portal provides a set of convenience methods found on the global `$sp` o
 | [getRecordValues](#getRecordValues) (Object, GlideRecord, String): void | Copies values for the specified field names from a GlideRecord into the data parameter. |
 | getStream(String, String): Object | Get the activity stream for a record. |
 | getUserInitials() | Returns the user's initials as a string. |
-| [getValue](#getValue)(String): Object | Returns a value from an object or GlideRecord in this order: <br/>1. The http request<br/> 2. The widget's sp_instance* record<br/>3. The current sp_portal record<br />or returns null |
+| [getValue](#getValue)(String): Object | Like [getDisplayValue](#getDisplayValue) except that it returns the value instead of the display value. |
 | [getValues](#getValues)(Object, String): void | Copies values from the request or instance into the data parameter. |
 | [getValues](#getValues)(Object): void | Copies values from the widget's sp_instance GlideRecord into the data parameter. |
 | [getWidget](#getWidget)(String, Object): Object | Returns a widget model for embedding a widget inside another widget. |
@@ -230,3 +230,86 @@ HTML Template
 Result
 
 ![Screenshot](./assets/widget_server_script_apis/getCatalogItem.png)
+
+
+<a name="getDisplayValue"></a> $sp.getDisplayValue()
+-----
+Returns the display value of a given field (if it exists and has a value) from either the widget's sp_instance or the sp_portal record. Refer to the following diagram:
+
+![Page map with widget instance](./assets/widget_server_script_apis/getDisplayValue_pagemap.png)
+
+This map visualizes a service portal page with one widget on it. Calling $sp.getDisplayValue("title") would return the display value of the title field on the widget's sp_instance record. If the title field didn't exist or was empty, then it would try the same operation on the the sp_portal record for the current portal context.
+
+> Note - Embedded widgets do not have sp_instance records.
+
+<br/>
+
+- $sp.getDisplayValue( fieldName ): String
+	- **Parameters**
+		- (*String*) fieldName
+		 The field name to get the display value of.
+	- **Returns**
+		- (*String*) A display value from either the sp_instance record or sp_portal record.
+
+<br/>
+Server Script
+
+```javascript
+(function() {
+	data.title = $sp.getDisplayValue("title");
+	data.catalog = $sp.getDisplayValue("sc_catalog");
+})();
+```
+
+<br/>
+HTML Template
+
+```html
+<div>
+	<h1>sp_instance.title: {{::data.title}}</h1>
+	<h1>sp_portal.sc_catalog: {{::data.catalog}}</h1>
+</div>
+```
+
+<br/>
+Result
+
+![Screenshot](./assets/widget_server_script_apis/getDisplayValue.png)
+
+
+<a name="getValue"></a> $sp.getValue()
+-----
+Returns the value of a given field (if it exists and has a value) from either the widget's sp_instance or the sp_portal record. See [getDisplayValue](#getDisplayValue) for more info.
+
+
+- $sp.getValue( fieldName ): Object
+	- **Parameters**
+		- (*String*) fieldName
+		 The field name to get the value of.
+	- **Returns**
+		- (*Object*) A value from either the sp_instance record or sp_portal record.
+
+<br/>
+Server Script
+
+```javascript
+(function() {
+	data.title = $sp.getValue("title");
+	data.catalog = $sp.getValue("sc_catalog");
+})();
+```
+
+<br/>
+HTML Template
+
+```html
+<div>
+	<h1>sp_instance.title: {{::data.title}}</h1>
+	<h1>sp_portal.sc_catalog: {{::data.catalog}}</h1>
+</div>
+```
+
+<br/>
+Result
+
+![Screenshot](./assets/widget_server_script_apis/getValue.png)
