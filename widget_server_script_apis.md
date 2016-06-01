@@ -136,3 +136,97 @@ Result
 ![Screenshot](./assets/widget_server_script_apis/canReadRecord.png)
 
 > Notice how the list of items is different based on the logged in user
+
+<a name="getCatalogItem"></a> $sp.getCatalogItem()
+-----
+A quick way to get all of the data necessary to render and order a catalog item using \<sp-model />. If you just need to get a catalog item to show its picture or name, consider using GlideRecord to query the sp_cat_item table.
+
+The following example demonstrates how to use getCatalogItem and \<sp-model /> together.
+
+- $sp.getCatalogItem( sys_id ): Object
+	- **Parameters**
+		- (*String*) sys_id  
+		 The sys_id of the catalog item(sc_cat_item) or order guide(sc_cat_item_guide).
+	- **Returns**
+		- (*Object*) An object containing the catalog item variable model, view, sections, pricing and client scripts.
+
+Server Script
+
+```javascript
+(function() {
+	var sys_id = $sp.getParameter("sys_id")
+	data.catItem = $sp.getCatalogItem(sys_id);
+})();
+```
+<br/>
+Client Script
+
+```javascript
+function($http, spUtil) {
+	var c = this;
+	var submitting = false;
+	c.getIt = function() {
+		if (submitting) return;
+		$http.post(spUtil.getURL('sc_cat_item'), c.data.catItem).success(function(response) {
+			if (response.answer) {
+				c.req = response.answer;
+				c.req.page = c.req.table == 'sc_request' ? 'sc_request' : 'ticket';
+			}
+		});
+	}
+}
+```
+
+<br/>
+SCSS
+
+```css
+
+.img-bg {
+	padding: 5px;
+	background-color: $brand-primary;
+}
+
+.img-responsive {
+	margin: 0 auto;
+}
+
+.cat-icon {
+	display: block; 
+	margin: -40px auto 0;
+}
+```
+<br/>
+
+HTML Template
+
+```html
+<div class="col-sm-4">
+  <div class="panel panel-default">
+    <div class="img-bg">
+      <img ng-src="{{::data.catItem.picture}}" class="img-responsive" />
+    </div>
+    <span class="cat-icon fa fa-stack fa-lg fa-3x hidden-xs">
+      <i class="fa fa-circle fa-stack-2x text-success"></i>
+      <i class="fa fa-desktop fa-stack-1x fa-inverse"></i>
+    </span>
+    <div class="panel-body">
+      <p class="lead text-center">{{::data.catItem.name}}</p>
+      <ul class="list-unstyled">
+        <li class="text-center" ng-if="::data.catItem.price">${Price}: {{::data.catItem.price}}</li>
+      </ul>
+      <sp-model form-model="::data.catItem" mandatory="mandatory"></sp-model>
+      <p ng-if="c.req" class="text-center text-success">
+        ${Request created!} <a href="?id={{c.req.page}}&table={{c.req.table}}&sys_id={{c.req.sys_id}}">{{c.req.number}}</a>
+      </p>
+      <button ng-if="!c.req" class="btn btn-default btn-block" ng-click="c.getIt()">${Get it}</button>
+    </div>
+  </div>
+</div>
+```
+
+<br/>
+
+Result
+
+![Screenshot](./assets/widget_server_script_apis/getCatalogItem.png)
