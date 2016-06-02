@@ -5,7 +5,7 @@ Service Portal provides a set of convenience methods found on the global `$sp` o
 | :------ | :----------- |
 | [canReadRecord](#canReadRecord)(Mixed, *opt String*): boolean | Returns true if the user can read the specified GlideRecord. |
 | [getCatalogItem](#getCatalogItem)(String): Object | Returns a model and view model for a sc_cat_item or sc_cat_item_guide. |
-| [getDisplayValue](#getDisplayValue)(String): String | Returns a display value from a field on a record in this order: <br/>1. The widget's sp_instance* record<br/>2. 
+| [getDisplayValue](#getDisplayValue)(String): String | Returns a display value from a field on a record in this order: <br/>1. The widget's sp_instance* record<br/>2.
 | [getField](#getField)(GlideRecord, String): Object | Returns {display_value, label, type, value} for a given field on a GlideRecord. |
 | [getFields](#getFields)(GlideRecord, String): Array | Like getField Checks the specified field names, and returns a comma seperated list of valid names. |
 | [getFieldsObject](#getFieldsObject)(GlideRecord, String) | Checks the specified field names, and returns an object containing the valid names. |
@@ -56,7 +56,7 @@ HTML Template
 ```
 <br/>
 Result
-![Screenshot](./assets/widget_server_script_apis/getPortalRecord.png)
+![Screenshot](/assets/widget_server_script_apis/getPortalRecord.png)
 
 <a name="getWidget"></a> $sp.getWidget()
 -----
@@ -83,11 +83,11 @@ HTML Template
 <sp-widget widget="c.data.myWidget"></sp-widget>
 ```
 <br />
-For more information and examples refer to the [Embedded Widgets guide](/widget_embedded.md).
+For more information and examples refer to the [Embedded Widgets guide](widget_embedded.md).
 
 <a name="canReadRecord"></a> $sp.canReadRecord()
 -----
-Useful for quickly determining if a record is valid and if the logged-in user has access to it. 
+Useful for quickly determining if a record is valid and if the logged-in user has access to it.
 
 > If the record type is kb_knowledge, sc_cat_item, or sc_category it also checks if the user can view that item.
 
@@ -96,7 +96,7 @@ Useful for quickly determining if a record is valid and if the logged-in user ha
 		- (*GlideRecord*) gr  
 		 A glide record
 	- **Returns**
-		- (*Boolean*) True if the record is valid and readable 
+		- (*Boolean*) True if the record is valid and readable
 - $sp.canReadRecord( table, sys_id ): Boolean
 	- **Parameters**
 		- (*String*) table  
@@ -133,7 +133,7 @@ HTML Template
 ```
 <br/>
 Result
-![Screenshot](./assets/widget_server_script_apis/canReadRecord.png)
+![Screenshot](/assets/widget_server_script_apis/canReadRecord.png)
 
 > Notice how the list of items is different based on the logged in user
 
@@ -192,7 +192,7 @@ SCSS
 }
 
 .cat-icon {
-	display: block; 
+	display: block;
 	margin: -40px auto 0;
 }
 ```
@@ -229,14 +229,14 @@ HTML Template
 
 Result
 
-![Screenshot](./assets/widget_server_script_apis/getCatalogItem.png)
+![Screenshot](/assets/widget_server_script_apis/getCatalogItem.png)
 
 
 <a name="getDisplayValue"></a> $sp.getDisplayValue()
 -----
 Returns the display value of a given field (if it exists and has a value) from either the widget's sp_instance or the sp_portal record. Refer to the following diagram:
 
-![Page map with widget instance](./assets/widget_server_script_apis/getDisplayValue_pagemap.png)
+![Page map with widget instance](/assets/widget_server_script_apis/getDisplayValue_pagemap.png)
 
 This map visualizes a service portal page with one widget on it. Calling $sp.getDisplayValue("title") would return the display value of the title field on the widget's sp_instance record. If the title field didn't exist or was empty, then it would try the same operation on the the sp_portal record for the current portal context.
 
@@ -274,7 +274,7 @@ HTML Template
 <br/>
 Result
 
-![Screenshot](./assets/widget_server_script_apis/getDisplayValue.png)
+![Screenshot](/assets/widget_server_script_apis/getDisplayValue.png)
 
 
 <a name="getValue"></a> $sp.getValue()
@@ -312,4 +312,4 @@ HTML Template
 <br/>
 Result
 
-![Screenshot](./assets/widget_server_script_apis/getValue.png)
+![Screenshot](/assets/widget_server_script_apis/getValue.png)

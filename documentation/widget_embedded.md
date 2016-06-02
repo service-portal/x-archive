@@ -2,7 +2,7 @@
 # Embedded Widgets
 
 ## \<sp-widget />
-You can embed any widget inside of your widget’s [HTML template](widget_html.md) using the `sp-widget` directive. This directive requires a complete widget model which you can get using [spUtil.get()](#client-side) on the client or [$sp.getWidget](#server-side) in the [server script](/widget_server_script.md). The basic usage looks like this:
+You can embed any widget inside of your widget’s [HTML template](widget_html.md) using the `sp-widget` directive. This directive requires a complete widget model which you can get using [spUtil.get()](#client-side) on the client or [$sp.getWidget](#server-side) in the [server script](widget_server_script.md). The basic usage looks like this:
 
 HTML Template  
 
@@ -39,8 +39,8 @@ This example will show you how to create a new widget and test page, and how to 
    **Widget Id:** embedded_clock  
    **Create a test page:** True  
    **Page Id:** embedded_clock  
-   
-   ![New widget dialog](./assets/widget_embedded/example_clock_1.png)
+
+   ![New widget dialog](/assets/widget_embedded/example_clock_1.png)
 3. Click **Submit**
 4. Now, copy the following code blocks into your new widget:
 
@@ -82,11 +82,11 @@ CSS
 Result <br />
 In a new browser window go to: /$sp.do?id=embedded_clock  
 
-![Embedded clock](./assets/widget_embedded/example_clock_2.png)
+![Embedded clock](/assets/widget_embedded/example_clock_2.png)
 <br/>
 #### <a name="embedding_with_server_script" href="#embedding_with_server_script">#</a> Embedding a widget using server script
 
-Embedding a widget via server script is just as easy as embedding one via your widget's client script controller. 
+Embedding a widget via server script is just as easy as embedding one via your widget's client script controller.
 
 Use the widget you created in the first example, but replace the contents with the following code blocks:
 
@@ -122,16 +122,16 @@ Server Script
 Result <br />
 In a new browser window go to: /$sp.do?id=embedded_clock  
 
-![Embedded clock](./assets/widget_embedded/example_clock_2.png)
+![Embedded clock](/assets/widget_embedded/example_clock_2.png)
 
 <br/>
 #### <a name="embedding_with_options" href="#embedding_with_options">#</a> Providing options to an embedded widget
 
-Building on top of the previous example, now you will see how to embed the cool clock widget with custom options. Each instance of the clock is provided a different timezone and title. 
+Building on top of the previous example, now you will see how to embed the cool clock widget with custom options. Each instance of the clock is provided a different timezone and title.
 
 > To see what options are configurable in the cool clock widget, open it in the widget editor. It uses the options object for the title, second hand color, and the timezone. This screenshot shows you where they're hiding.
 
-> ![Cool clock client script](./assets/widget_embedded/example_clock_options_1.png)
+> ![Cool clock client script](/assets/widget_embedded/example_clock_options_1.png)
 
 #### Part 1
 Use the following code to provide the c_color option when you fetch the widget:
@@ -147,7 +147,7 @@ Server Script
 Result<br/>
 In a new browser window go to: /$sp.do?id=embedded_clock
 
-![Clock with gold second hand](./assets/widget_embedded/example_clock_option.png)
+![Clock with gold second hand](/assets/widget_embedded/example_clock_option.png)
 
 #### Part 2
 What's more interesting than embedding one widget with custom options? How about four?!
@@ -197,7 +197,7 @@ Server Script
 		{zone: "America/Chicago", title: "Chicago"},
 		{zone: "America/New_York", title: "New York"}
 	];
-	
+
 	data.clocks = [];
 	for (var i in options) {
 		data.clocks.push($sp.getWidget("widget-cool-clock", options[i]));
@@ -210,7 +210,7 @@ In a new browser window go to: /$sp.do?id=embedded_clock
 
 Each instance of the clock widget has a different timezone and title.
 
-![Embedded clock](./assets/widget_embedded/example_clock_options_2.png)
+![Embedded clock](/assets/widget_embedded/example_clock_options_2.png)
 
 
 <br/><br/>
@@ -255,7 +255,7 @@ data.catalogItemWidget = $sp.getWidget("widget-sc-cat-item", {sys_id: "your_cata
 
 The widget model contains all of the client-side parts of a widget needed to create an angular directive. The HTML template, client script, and link function are loaded just as they are in the sp_widget record. The data property is the result of the widget's server script execution. Anything that you put on the data object on the server is available in the data object on the client.
 
-Here is a detailed look at some of the fields in the widget model: 
+Here is a detailed look at some of the fields in the widget model:
 
 | Property name | Type | Description |
 | ------------- | ---- | ----------- |

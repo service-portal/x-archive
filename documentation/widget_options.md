@@ -1,5 +1,5 @@
 # Widget Options
-In Service Portal, users can configure widgets embedded on pages through the power of **Widget Instances** (for more on this topic, read [Widget Instances](/widget_instances.md) and return here for more).
+In Service Portal, users can configure widgets embedded on pages through the power of **Widget Instances** (for more on this topic, read [Widget Instances](widget_instances.md) and return here for more).
 
 Now, let's go over how a Widget Developer could define an option schema within their own widgets to enable this level of configurability.
 
@@ -10,7 +10,7 @@ To do this, you will need to navigate to the Widget Editor and select the widget
 
 You should be presented with something that looks like this:
 
-![Edit Option Schema](./assets/widget_options/widget_options_schema_modal.png)
+![Edit Option Schema](/assets/widget_options/widget_options_schema_modal.png)
 
 This is where you can add and subtract widget options, along with types and hints. From here, press the + icon and give it a label, a name (snakecase, like_this), a type, and a hint. Depending on the type you select, you may be prompted to provide additional fields.
 
