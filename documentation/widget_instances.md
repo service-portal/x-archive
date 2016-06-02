@@ -25,4 +25,5 @@ Now, from this modal, we will fill in the following fields:
 
 Hit **Save**, and the page will refresh with your newly-configured widget. Click on one of the List entries, and notice that you will be taken to a Form page for that record.
 
+### The 'Link to this page' field is missing from my instance - what do I do? (Issue Fixed in Helsinki Patch 1)
 If you click on a record from the list and it does not open, type `sp_instance.list` in the left navigator, then find the instance of your Simple List widget. After you open the Widget Instance form, right click the header and select `Configure > Form Layout` from the context menu. Now find the 'Link to this page' field and add it to the Instance of Simple List view of the form. Click 'Save'. Go back to the Widget Instance form and select the page, that your Simple List needs to open records, by finding the page in the 'Link to this page' reference field. 
