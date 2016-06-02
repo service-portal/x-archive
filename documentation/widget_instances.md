@@ -24,3 +24,5 @@ Now, from this modal, we will fill in the following fields:
 * Secondary fields - **number**, **sys_updated_on**
 
 Hit **Save**, and the page will refresh with your newly-configured widget. Click on one of the List entries, and notice that you will be taken to a Form page for that record.
+
+__If you click on a record from your new list and the record does not open, type `sp_intance.list` in the left navigator and find the instance of your Simple List widget. After you open the Widget Instance form, right click the header and select `Configure > Form Layout` from the context menu. Now find the 'Link to this page' field and add it to the Instance of Simple List view of the form. Click Save. Go back to the Widget Instance form and select the page that will open the records contained within you Simple List widget.__ 
