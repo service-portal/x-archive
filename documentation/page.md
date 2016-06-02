@@ -4,4 +4,4 @@ A page is a collection of [bootstrap](http://getbootstrap.com/css/#grid) contain
 
 Learn more:
   - [Layout](page_layout.md)
-  - [CSS](/page_css.md)
+  - [CSS](page_css.md)
