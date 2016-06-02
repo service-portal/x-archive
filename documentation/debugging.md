@@ -21,4 +21,3 @@
 | `gs.error(String)` | Normal ServiceNow function to output text to the `syslog` database table as an ERROR.|
 | `gs.addInfoMessage(String)` | Normal ServiceNow function to output a message to the page in the browser, visible in the ServiceNow UI|
 | `gs.addErrorMessage(String)` | Normal ServiceNow function to output an error to the page in the browser, visible in the ServiceNow UI|
-| `debugger` | Native to Chrome and Firefox to set a browser breakpoint, letting an admin step through script line by line |
