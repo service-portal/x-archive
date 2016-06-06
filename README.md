@@ -25,6 +25,7 @@ If you can't find what are you looking for: open an issue. If you'd like to cont
   - [Server Script APIs](documentation/widget_server_script_apis.md)
   - [Instances](documentation/widget_instances.md)
   - [Options](documentation/widget_options.md)
+  - [Record Watch](documentation/widget_record_watch.md)
 + [Create Forms](documentation/create_forms.md)
 + [Sass Support](documentation/css.md)
 + [Debugging](documentation/debugging.md)
