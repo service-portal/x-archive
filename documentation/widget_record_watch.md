@@ -3,6 +3,7 @@ Record Watch is a tool that allows a widget developer to respond to table update
 
 Below is an example of how to use Record Watch in a widget's Client Script.
 
+##### Client Script
 ```javascript
 function(spUtil, $scope) {
   /* widget controller */
