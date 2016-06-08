@@ -25,3 +25,4 @@ The callback function takes two parameters:
 ### Usage Notes
 * When passing the `$scope` argument into the `spUtil.recordWatch` function, be sure to inject `$scope` into the parameters of your Client Script function. For details, see the code snippet above.
 * For a real example of using Record Watch, see the **Simple List Widget**.
+* Tables that are (periodically) subject to a high frequency of database events are blacklisted from Record Watcher to prevent event storms. 
