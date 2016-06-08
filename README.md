@@ -26,6 +26,7 @@ If you can't find what are you looking for: open an issue. If you'd like to cont
   - [Instances](documentation/widget_instances.md)
   - [Options](documentation/widget_options.md)
   - [Record Watch](documentation/widget_record_watch.md)
+  - [Internationalization](documentation/widget_internationalization.md)
 + [Create Forms](documentation/create_forms.md)
 + [Sass Support](documentation/css.md)
 + [Debugging](documentation/debugging.md)
