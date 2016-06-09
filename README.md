@@ -31,6 +31,7 @@ If you can't find what are you looking for: open an issue. If you'd like to cont
 + [Sass Support](documentation/css.md)
 + [Debugging](documentation/debugging.md)
 + [Form Widget](documentation/form.md)
++ [CMS and Service Portal](documentation/cms.md)
 + [FAQ](documentation/faq.md)
 
 ___
