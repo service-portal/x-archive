@@ -6,11 +6,76 @@ CSS rules for pages and widgets can be written using regular [CSS][10] or as [SC
 
 Table of Contents
 -----------
-1. [SCSS Basic](#scss)
-2. [List of functions][30]
-3. [List of mixins][31]
-4. [Page CSS][40]
-5. [Widget CSS][41]
+1. [Service Portal Layout Model](#layout)
+   * [Portal CSS](#portal)
+   * [Page CSS](#page)
+   * [Containers and Rows CSS](#container)
+   * [Instances and Widget CSS](#instance-widget)
+2. [SCSS Basic](#scss)
+3. [List of functions][30]
+4. [List of mixins][31]
+
+Service Portal Layout Model <a name="layout"></a>
+-----------
+A portal is represented by pages with containers, rows and instances.
+
+![Layout Model](../assets/css/css-layout.png)
+
+In /sp_config, the page edit tree will show the layout model hierarchy.
+
+![Page Edit](../assets/css/css-layout-tree.png)
+
+##### <a name="portal">Portal</a>
+
+Portal CSS are editable in /sp_config portal edit. CSS variables and rules that are defined here are scoped and available to pages, containers, rows, and instances. Use portal css for global definitions shared by all pages.
+
+![Portal](../assets/css/css-portal.png)
+
+##### <a name="page">Page</a>
+
+Page CSS variables and rules are scoped and affects the page and all elements below.
+
+![Page](../assets/css/css-page.png)
+
+
+
+##### <a name="container">Container</a>
+
+Container CSS are defined by specificing a parent class or css class.
+
+![Container](../assets/css/css-container.png)
+
+
+
+##### <a name="container-row">Row</a>
+
+Row CSS are defined by specificing a CSS class.
+
+![Container Row](../assets/css/css-container-row.png)
+
+
+
+##### <a name="container-column">Column</a>
+
+Column CSS are defined by specificing a CSS class.
+
+![Container Column](../assets/css/css-container-column.png)
+
+
+
+##### <a name="intance-widget">Widget Instance</a>
+
+Instance CSS variables and rules are scoped and affects the widget instance.
+
+![Widget Instance](../assets/css/css-widget-instance.png)
+
+
+
+##### <a name="widget">Widget</a>
+
+Widget CSS variables and rules are scoped and affects the widget and all instances.
+
+![Widget](../assets/css/css-widget.png)
 
 <a name="scss">SCSS Primer</a>
 -----------
