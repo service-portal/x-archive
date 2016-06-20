@@ -12,7 +12,7 @@ If you can't find what are you looking for: open an issue. If you'd like to cont
 
 + [Service Portal](documentation/service_portal.md)
 + [Portal](documentation/portal.md)
-+ [Page](documentation/page.md)
++ [Page](documentation/css.md#page)
   - [Layout](documentation/page_layout.md)
   - [CSS](documentation/page_css.md)
 + [Widget](documentation/widget.md)
