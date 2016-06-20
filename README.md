@@ -14,7 +14,7 @@ If you can't find what are you looking for: open an issue. If you'd like to cont
 + [Portal](documentation/portal.md)
 + [Page](documentation/css.md#page)
   - [Layout](documentation/page_layout.md)
-  - [CSS](documentation/page_css.md)
+  - [CSS](documentation/css.md#page)
 + [Widget](documentation/widget.md)
   - [HTML](documentation/widget_html.md)
   - [Client Script](documentation/widget_client_script.md)
