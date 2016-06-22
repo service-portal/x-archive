@@ -1,4 +1,6 @@
-# SSO, Login & Redirect
+# SSO, Login & Redirect 
+
+_Working since Helsinki Patch 2_
 
 #### A few words on SSO
 If you use SSO, Service Portal should just work like you would expect. If you are using the system property to automatically redirect to your primary IDP, then Service Portal will automatically redirect to that IDP. If you have multiple identity providers, Service Portal shows a link on the login page to "Use external login". You can conditionally redirect users to Service Portal after login by following the steps in this guide.
