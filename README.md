@@ -32,6 +32,7 @@ If you can't find what are you looking for: open an issue. If you'd like to cont
 + [Debugging](documentation/debugging.md)
 + [Form Widget](documentation/form.md)
 + [CMS and Service Portal](documentation/cms.md)
++ [SSO, Login & Redirect](document/sso_configuration.md)
 + [FAQ](documentation/faq.md)
 
 ___
