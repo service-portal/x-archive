@@ -1,162 +1,81 @@
 
 # Embedded Widgets
 
-## \<sp-widget />
-You can embed any widget inside of your widget’s [HTML template](widget_html.md) using the `sp-widget` directive. This directive requires a complete widget model which you can get using [spUtil.get()](#client-side) on the client or [$sp.getWidget](#server-side) in the [server script](widget_server_script.md). The basic usage looks like this:
-
-HTML Template  
-
-```html
-<sp-widget widget="c.myClockWidget"></sp-widget>
-```   
-<br />
-Client Script
-
-```javascript
-function(spUtil) {
-	var c = this;
-	spUtil.get("widget-cool-clock").then(function(response) {
-			c.myClockWidget = response;
-	});
-}
-```
-
-Examples
-------
-
-1. [Embed a widget using client script](#embedding_with_client_script)
-2. [Embed a widget using server script](#embedding_with_server_script)
-3. [Providing options to an embedded widget](#embedding_with_options)
-
-#### <a name="embedding_with_client_script" href="#embedding_with_client_script">#</a> Embedding a widget using client script
-
-This example will show you how to create a new widget and test page, and how to embed the cool clock widget in a bootstrap panel.
-
-1. First go to the widget editor: /sp_config?id=widget_editor
-
-2. Click "Create a new widget" and use the following values  
-   **Widget Name:** Embedded clock  
-   **Widget Id:** embedded_clock  
-   **Create a test page:** True  
-   **Page Id:** embedded_clock  
-
-   ![New widget dialog](/assets/widget_embedded/example_clock_1.png)
-3. Click **Submit**
-4. Now, copy the following code blocks into your new widget:
-
+## \<widget\>\</widget\>
+You can embed any widget inside of your widget’s [HTML template](widget_html.md) using the custom `<widget></widget>` element. 
+The basic usage looks like this:
 
 HTML Template
-
 ```html
-<div class="my-clock">
-	<div class="panel panel-default ">
-		<div class="panel-heading">Time in San Diego</div>
-		<div class="panel-body">
-			<sp-widget widget="c.myClockWidget"></sp-widget>
-		</div>
-	</div>
+<div>
+  <widget id="widget-cool-clock"></widget>
 </div>
 ```
-<br />
-Client Script
+_The widget requires to have the `id` field defined in the widget record_
 
-```javascript
-function(spUtil) {
-	var c = this;
-	spUtil.get("widget-cool-clock").then(function(response) {
-			c.myClockWidget = response;
-	});
-}
-```
-<br />
-CSS  
+### Widget Options
 
-```css
-.my-clock {
-	margin: 25px;
-	width: 300px;
-	height: 300px;
-}
-```
-<br />
-Result <br />
-In a new browser window go to: /$sp.do?id=embedded_clock  
+Widgets might have [options](widget_options.md) that you can setup. You can define their values in JSON format:
 
-![Embedded clock](/assets/widget_embedded/example_clock_2.png)
-<br/>
-#### <a name="embedding_with_server_script" href="#embedding_with_server_script">#</a> Embedding a widget using server script
 
-Embedding a widget via server script is just as easy as embedding one via your widget's client script controller.
-
-Use the widget you created in the first example, but replace the contents with the following code blocks:
+#### Providing options in the HTML template
 
 HTML Template
-
 ```html
-<div class="my-clock">
-    <div class="panel panel-default ">
-        <div class="panel-heading">Time in San Diego</div>
-        <div class="panel-body">
-            <sp-widget widget="c.data.myClockWidget"></sp-widget>
-        </div>
-    </div>
-</div>
+<widget id="widget-cool-clock" options='{"zone": "America/Los_Angeles","title": "San Diego, CA"}'></widget>
 ```
-<br/>
-Client Script
 
-```javascript
-function() {
-	// nothing to do here...
-}
+![Clock Options](/assets/widget_embedded/clock-options.png)
+
+You don't necessary need to provide such options in the HTML template. 
+
+#### Providing options server-side
+
+HTML template
+```html
+<widget id="widget-cool-clock" options='data.clockOptions'></widget>
 ```
-<br/>
 Server Script
-
 ```javascript
 (function() {
-	data.myClockWidget = $sp.getWidget("widget-cool-clock", {});
+  data.clockOptions = {"zone": "America/Los_Angeles","title": "San Diego, CA"};
 })();
+
+
 ```
-<br />
-Result <br />
-In a new browser window go to: /$sp.do?id=embedded_clock  
 
-![Embedded clock](/assets/widget_embedded/example_clock_2.png)
+### Embedded Widgets client-side
 
-<br/>
-#### <a name="embedding_with_options" href="#embedding_with_options">#</a> Providing options to an embedded widget
+HTML Template
+```html
+<sp-widget widget="c.myClockWidget"></sp-widget>
+```
 
-Building on top of the previous example, now you will see how to embed the cool clock widget with custom options. Each instance of the clock is provided a different timezone and title.
+Client Script
+
+```javascript
+function(spUtil) {
+	var c = this;
+	spUtil.get("widget-cool-clock").then(function(response) {
+			c.myClockWidget = response;
+	});
+}
+```
+
+------
+
+
+#### Example: How to embed a widget multiple times with custom options
+
+Each instance of the clock is provided a different timezone and title.
 
 > To see what options are configurable in the cool clock widget, open it in the widget editor. It uses the options object for the title, second hand color, and the timezone. This screenshot shows you where they're hiding.
 
 > ![Cool clock client script](/assets/widget_embedded/example_clock_options_1.png)
 
-#### Part 1
-Use the following code to provide the c_color option when you fetch the widget:
-
-Server Script
-
-```javascript
-(function() {
-	data.myClockWidget = $sp.getWidget("widget-cool-clock", {c_color: "gold"});
-})();
-```
-<br />
-Result<br/>
-In a new browser window go to: /$sp.do?id=embedded_clock
-
-![Clock with gold second hand](/assets/widget_embedded/example_clock_option.png)
-
-#### Part 2
-What's more interesting than embedding one widget with custom options? How about four?!
-To really see the power of options and embedded widgets this example will demonstrate how to embed several clocks with different timezones and titles.
-
 Edit the "Embedded clock" widget and replace with the following code blocks:
 
-
-HTML
+HTML Template
 
 ```html
 <div class="panel panel-default">
@@ -206,10 +125,8 @@ Server Script
 ```
 <br />
 Result  
-In a new browser window go to: /$sp.do?id=embedded_clock  
 
 Each instance of the clock widget has a different timezone and title.
-
 ![Embedded clock](/assets/widget_embedded/example_clock_options_2.png)
 
 
