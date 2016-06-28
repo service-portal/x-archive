@@ -5,7 +5,6 @@ There have been a number of improvements made to Service Portal's Service Catalo
 1. Values that have been assigned to variables in order guides now "cascade" down to catalog items within the order guide.
 2. Variable Attributes defined on a Catalog item variable are now respected by Service Portal's Reference Element field.
 3. Labels for Service Catalog items that contain HTML now render the HTML inside the tag, instead of showing the HTML in plain text.
-4. **put order guide here if we need to**
 
 ---
 
