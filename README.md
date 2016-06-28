@@ -15,6 +15,7 @@ If you can't find what are you looking for: open an issue. If you'd like to cont
 + [Page](documentation/page.md)
   - [Layout](documentation/page_layout.md)
   - [CSS](documentation/css.md#page)
++ [Client Scripting & g_form](documentation/client_scripting.md)
 + [Widget](documentation/widget.md)
   - [HTML](documentation/widget_html.md)
   - [Client Script](documentation/widget_client_script.md)
