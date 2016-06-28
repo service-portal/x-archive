@@ -34,6 +34,7 @@ If you can't find what are you looking for: open an issue. If you'd like to cont
 + [Form Widget](documentation/form.md)
 + [CMS and Service Portal](documentation/cms.md)
 + [SSO, Login & Redirect](documentation/sso_configuration.md)
++ [Service Catalog Patch 2 Changes](documentation/service_catalog_patch2_changes.md)
 + [FAQ](documentation/faq.md)
 
 ___
