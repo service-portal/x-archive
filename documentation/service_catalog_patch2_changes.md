@@ -18,7 +18,7 @@ In Helsinki Patch 2 and above, any variables defined within an Order Guide marke
 4. Notice that when you populate the Order Guide variable with a value, that value will be carried to the equivalent variable to the individual ordered items.
 
 ## Variable Attributes
-
+In a reference element field on a Service Catalog item, you can optionally define several Variable Attributes on the variable. This give a Service Catalog administrator control over what fields to display in the autocomplete dropdown for a reference element, what fields to search over, and what order to display them in. These variables are now supported in Service Portal, and their usage is documented in full at [the ServiceNow documentation site](http://wiki.servicenow.com/index.php?title=Auto-Complete_for_Reference_Fields#gsc.tab=0).
 
 ## HTML in Labels
 In Helsinki Patch 2 and above, HTML written into a label field will be rendered as HTML in the label on a Service Catalog item. This means that tags such as `<b>` and `<br />` will be rendered as HTML.
