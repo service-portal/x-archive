@@ -1,58 +1,60 @@
 
 # Embedded Widgets
+In Service Portal, widgets can be embedded inside other widgets. This technique is useful for creating more powerful widgets through the composition of other widgets.
 
-## \<widget\>\</widget\>
-You can embed any widget inside of your widget’s [HTML template](widget_html.md) using the custom `<widget></widget>` element. 
+For a direct example of this, see the Social QA Question widget, which embeds a login widget next to the Answer Question section for an easy way to prompt users to login to answer questions.
+
+---
+
+## Widget Directive Syntax
+You can embed any widget inside of your widget’s [HTML template](widget_html.md) using the custom `<widget></widget>` element.
 The basic usage looks like this:
 
-HTML Template
+###### HTML Template
 ```html
 <div>
   <widget id="widget-cool-clock"></widget>
 </div>
 ```
-_The widget requires to have the `id` field defined in the widget record_
+_The widget requires to have the `id` field defined in the widget record._
 
-### Widget Options
+## Widget Options
 
 Widgets might have [options](widget_options.md) that you can setup. You can define their values in JSON format:
 
 
-#### Providing options in the HTML template
+### Providing options in the HTML template
 
-HTML Template
+###### HTML Template
 ```html
 <widget id="widget-cool-clock" options='{"zone": "America/Los_Angeles","title": "San Diego, CA"}'></widget>
 ```
 
 ![Clock Options](/assets/widget_embedded/clock-options.png)
 
-You don't necessary need to provide such options in the HTML template. 
+You don't necessary need to provide such options in the HTML template.
 
-#### Providing options server-side
+### Providing options server-side
 
-HTML template
+###### HTML template
 ```html
 <widget id="widget-cool-clock" options='data.clockOptions'></widget>
 ```
-Server Script
+###### Server Script
 ```javascript
 (function() {
   data.clockOptions = {"zone": "America/Los_Angeles","title": "San Diego, CA"};
 })();
-
-
 ```
 
 ### Embedded Widgets client-side
 
-HTML Template
+###### HTML Template
 ```html
 <sp-widget widget="c.myClockWidget"></sp-widget>
 ```
 
-Client Script
-
+###### Client Script
 ```javascript
 function(spUtil) {
 	var c = this;
@@ -65,7 +67,7 @@ function(spUtil) {
 ------
 
 
-#### Example: How to embed a widget multiple times with custom options
+## Example: How to embed a widget multiple times with custom options
 
 Each instance of the clock is provided a different timezone and title.
 
@@ -75,8 +77,7 @@ Each instance of the clock is provided a different timezone and title.
 
 Edit the "Embedded clock" widget and replace with the following code blocks:
 
-HTML Template
-
+###### HTML Template
 ```html
 <div class="panel panel-default">
   <div class="panel-heading">Time across the US</div>
@@ -89,25 +90,22 @@ HTML Template
   </div>
 </div>
 ```
-<br/>
-CSS
 
+###### CSS
 ```css
 .panel {
 	margin-top: 10px;
 }
 ```
-<br />
-Client Script
 
+###### Client Script
 ```javascript
 function() {
 	// nothing to do here...
 }
 ```
-<br />
-Server Script
 
+###### Server Script
 ```javascript
 (function() {
 	var options = [
@@ -123,18 +121,17 @@ Server Script
 	}
 })();
 ```
-<br />
-Result  
-
+### Result  
 Each instance of the clock widget has a different timezone and title.
+
 ![Embedded clock](/assets/widget_embedded/example_clock_options_2.png)
 
+---
 
-<br/><br/>
 ## API Reference
 
 ### Client Side
-#### spUtil.get() - Get a widget model via client script
+##### spUtil.get() - Get a widget model via client script
 
 ```javascript
 spUtil.get("widget-sc-cat-item", {sys_id: "your_catalog_item_sys_id"}).then(function(response) {
@@ -152,10 +149,9 @@ spUtil.get("widget-sc-cat-item", {sys_id: "your_catalog_item_sys_id"}).then(func
 
 The callback function is called when the widget model is ready. The response object contains the full widget model.
 
-<br/><br/>
 
 ### Server Side
-#### $sp.getWidget() - Get a widget model via server script
+##### $sp.getWidget() - Get a widget model via server script
 
 ```javascript
 data.catalogItemWidget = $sp.getWidget("widget-sc-cat-item", {sys_id: "your_catalog_item_sys_id"});
@@ -167,8 +163,9 @@ data.catalogItemWidget = $sp.getWidget("widget-sc-cat-item", {sys_id: "your_cata
 - (*object*) options  
    An object to pass to the widget's server script. Refer to this object as **options** in your server script.
 
-<br/><br/>
-#### Widget Model in depth
+**Note:** As of all versions of Helsinki, any options passed into this function will only be available in the embedded widget's server script on the **first execution** of that script. Any subsequent calls into the server script from the embedded widget will not contain the object properties passed in. This is something we are investigating for a future version of Helisinki or Istanbul.
+
+## Widget Model in depth
 
 The widget model contains all of the client-side parts of a widget needed to create an angular directive. The HTML template, client script, and link function are loaded just as they are in the sp_widget record. The data property is the result of the widget's server script execution. Anything that you put on the data object on the server is available in the data object on the client.
 
