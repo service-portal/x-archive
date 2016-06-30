@@ -105,7 +105,7 @@ These are the officially supported client scripting APIs you can use in onLoad, 
 
 ### GlideAjax
 
-* create(scriptIncludeName)
+* new GlideAjax(scriptIncludeName)
   * addParam (name, value)
   * getParam (name)
   * getXML(callback)
@@ -122,7 +122,7 @@ These are the officially supported client scripting APIs you can use in onLoad, 
 
 
 ### GlideRecord
-* create(tableName)
+* new GlideRecord(tableName)
   * addQuery(encodedQuery)
   * addQuery(fieldName, operator, value)
   * getEncodedQuery()
