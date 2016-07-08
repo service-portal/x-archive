@@ -5,9 +5,18 @@ _Working since Helsinki Patch 2_
 #### A few words on SSO
 If you use SSO, Service Portal should just work like you would expect. If you are using the system property to automatically redirect to your primary IDP, then Service Portal will automatically redirect to that IDP. If you have multiple identity providers, Service Portal shows a link on the login page to "Use external login". You can conditionally redirect users to Service Portal after login by following the steps in this guide.
 
+ * Require authentication for every Service Portal
  * Make Service Portal your default login page
  * Conditionally redirect to Service Portal after login
 
+### Require authentication for every Service Portal
+
+Some companies want their portal content available to only authenticated users. To do this, create a record in the sys_public table with the following values:
+
+Page: $sp  
+Active: false
+
+Now when you go to [instance]/sp or [instance]/$sp.do you will be redirected to the platform configured login page if you're unauthenticated. This may be useful for companies with more complex SSO environments.
 
 ### Make Service Portal your login page
 
@@ -18,7 +27,7 @@ set the system property glide.entry.page.script = "new SPEntryPage().getLoginURL
 
 **Setting the portal**
 
-Out of the box, SPEntryPage uses /sp/ as the portal path to redirect to. Edit the SPEntryPage Script Include and change the assigned portal to any portal_suffix you want.
+SPEntryPage uses /sp/ as the portal path to redirect to. If you must, edit the SPEntryPage Script Include and change the assigned portal to any portal_suffix you want. (Once you make changes to this script include it won't be upgraded with future updates)
 
 ![Screenshot](/assets/sso/portal_suffix.png)
 
@@ -27,12 +36,12 @@ Out of the box, SPEntryPage uses /sp/ as the portal path to redirect to. Edit th
 
 To conditionally redirect a user to Service Portal after login, set the system property glide.entry.first.page.script = "new SPEntryPage().getFirstPageURL()"
 
-Out of the box this function does 2 primary things:
+getFirstPageURL does 2 primary things:
 
   1. Redirects to login_redirect.do in order to break out of the frameset (if there is one).
   2. Redirects to Service Portal if the user has no roles, or the full platform for everyone else.
 
-Feel free to customize this behavior within the "SPEntryPage" script include.
+You can customize this behavior within the "SPEntryPage" script include. (Once you make changes to this script include it won't be upgraded with future updates)
 
 ### Debugging
 
