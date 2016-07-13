@@ -17,7 +17,11 @@ All **Server-side UI Actions** are supported, with one important distinction - s
 Any UI Actions marked Client are **not compatible with Service Portal** and will be ignored by the Form widget.
 
 ### UI Macros
-UI Macros are **not supported** in Service Portal.
+UI Macros are **not supported** in Service Portal (they use Jelly, and Service Portal doesn't).
 
 ### UI Policies
 UI Policies are supported in Service Portal forms.
+
+### Formatters
+Formatters are **not supported** in Service Portal (they use Jelly, and Service Portal doesn't).
+
