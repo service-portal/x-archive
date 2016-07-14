@@ -1,5 +1,7 @@
 # spUtil
 
+Set of methods that perform common, often re-used functions. 
+
 | Method | Description|
 | :------ | :----------- |
 | addErrorMessage(String message)| Displays a notification error message |
@@ -7,6 +9,8 @@
 ```javascript
 spUtil.addErrorMessage("There has been an error processing your request")
 ```
+
+<br/>
 
 | Method | Description|
 | :------ | :----------- |
@@ -16,6 +20,8 @@ spUtil.addErrorMessage("There has been an error processing your request")
 spUtil.addInfoMessage("Your order has been placed")
 ```
 
+<br/>
+
 | Method | Description|
 | :------ | :----------- |
 | addTrivialMessage(String message)| Displays a notification trivial message |
@@ -23,6 +29,8 @@ spUtil.addInfoMessage("Your order has been placed")
 ```javascript
 spUtil.addTrivialMessage("Thanks for your order")
 ```
+
+<br/>
 
 | Method | Description|
 | :------ | :----------- |
@@ -33,6 +41,8 @@ spUtil.get("widget-cool-clock").then(function(response) {
     c.coolClock = response;
 });
 ```
+
+<br/>
 
 
 | Method | Description|
@@ -45,11 +55,15 @@ instead of doing string concatenation you can use `format()`.
 spUtil.format('An error ocurred: {error} when loading {widget}', {error: '404', widget: 'sp-widget'})
 ```
 
+<br/>
+
 | Method | Description|
 | :------ | :----------- |
 | refresh(Object $scope) | Calls the server and automatically replaces the current options and data from the server response. Returns Promise |
 
 Same as `server.refresh()`  The diference is that you can define what $scope to pass over. 
+
+<br/>
 
 | Method | Description|
 | :------ | :----------- |
@@ -58,6 +72,8 @@ Same as `server.refresh()`  The diference is that you can define what $scope to 
 ```javascript
 spUtil.recordWatch($scope, "live_profile", "sys_id=" + liveProfileId);
 ```
+
+<br/>
 
 More documentation on recordWatch can be found [here](./widget_record_watch.md).
 
