@@ -23,6 +23,7 @@ If you can't find what are you looking for: open an issue. If you'd like to cont
   - [Dependencies](documentation/widget_dependencies.md)
   - [CSS/SCSS](documentation/css.md)
   - [Embedded Widgets](documentation/widget_embedded.md)
+  - [Client Script APIs](documentation/widget_client_script_apis.md)
   - [Server Script APIs](documentation/widget_server_script_apis.md)
   - [Instances](documentation/widget_instances.md)
   - [Options](documentation/widget_options.md)
