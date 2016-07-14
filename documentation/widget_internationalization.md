@@ -8,14 +8,12 @@ Internationalizing strings in a widget is very simple with Service Portal. In an
   <p>However, this will NOT be.</p>
 </div>
 ```
+Writing text as ``${message}`` is the equivalent of writing ``${gs.getMessage("message")}`` in other parts of the system, but written as a more legible shorthand.
 
 <br/>
 
-Writing text as ``${message}`` is the equivalent of writing ``${gs.getMessage("message")}`` in other parts of the system, but written as a more legible shorthand.
-
-Text can be internationalized the same way inside a client script.
-
 #### Client Script
+Text can be internationalized the same way inside a client script.
 ```javascript
 function() {
   var c = this;
