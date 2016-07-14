@@ -72,10 +72,9 @@ Same as `server.refresh()`  The diference is that you can define what $scope to 
 ```javascript
 spUtil.recordWatch($scope, "live_profile", "sys_id=" + liveProfileId);
 ```
+More documentation on recordWatch can be found [here](./widget_record_watch.md).
 
 <br/>
-
-More documentation on recordWatch can be found [here](./widget_record_watch.md).
 
 | Method | Description|
 | :------ | :----------- |
