@@ -28,3 +28,21 @@ function() {
   <p>{{c.message}}</p>
 </div>
 ```
+
+In some cases, the translation might have quotes or double quotes on it. That could lead to JavasScript errors if you are using the ${} syntax in the client script.  
+The safest way to fetch a translated message is to do it in the server script. 
+Then, assign the value to a client-side angular binding.
+
+##### Server Script
+```javascript
+function() {  
+  data.message = gs.getMessage("this message contains 'quotes'");
+}
+```
+
+##### HTML Template
+```html
+<div>  
+  <p>{{c.data.message}}</p>
+</div>
+```
