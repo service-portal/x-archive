@@ -32,6 +32,9 @@ function() {
 <br/>
 
 #### Server Script
+
+Great for translating schema options and other values fetch during server-side runtime. 
+
 ```javascript
 function() {  
   data.message = gs.getMessage("this message contains 'quotes'");
