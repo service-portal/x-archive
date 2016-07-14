@@ -82,7 +82,7 @@ More documentation on recordWatch can be found [here](./widget_record_watch.md).
 
 Same as `server.update()`. The diference is that you can define what $scope to pass over. 
 
-
+`Do not try to use any other methods from spUtil() that are not listed here`
 
 
 
