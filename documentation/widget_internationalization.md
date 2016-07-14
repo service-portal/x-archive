@@ -1,7 +1,7 @@
 # Internationalization
 Internationalizing strings in a widget is very simple with Service Portal. In any widget's HTML Template, simply write the following:
 
-##### HTML Template
+#### HTML Template
 ```html
 <div>
   <p>${This message will be internationalized.}</p>
@@ -9,11 +9,13 @@ Internationalizing strings in a widget is very simple with Service Portal. In an
 </div>
 ```
 
+<br/>
+
 Writing text as ``${message}`` is the equivalent of writing ``${gs.getMessage("message")}`` in other parts of the system, but written as a more legible shorthand.
 
 Text can be internationalized the same way inside a client script.
 
-##### Client Script
+#### Client Script
 ```javascript
 function() {
   var c = this;
@@ -29,11 +31,9 @@ function() {
 </div>
 ```
 
-In some cases, the translation might have quotes or double quotes on it. That could lead to JavasScript errors if you are using the ${} syntax in the client script.  
-The safest way to fetch a translated message is to do it in the server script. 
-Then, assign the value to a client-side angular binding.
+<br/>
 
-##### Server Script
+#### Server Script
 ```javascript
 function() {  
   data.message = gs.getMessage("this message contains 'quotes'");
@@ -46,3 +46,10 @@ function() {
   <p>{{c.data.message}}</p>
 </div>
 ```
+
+<br/>
+
+#### Translations with quotes
+In some cases, the translation might have quotes or double quotes on it. That could lead to JavasScript errors if you are using the ${} syntax in the client script.  
+The safest way to fetch a translated message is to do it in the server script. 
+Then, assign the value to a client-side angular binding.
