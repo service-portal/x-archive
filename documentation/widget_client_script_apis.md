@@ -21,7 +21,7 @@ spUtil.addInfoMessage("Your order has been placed")
 | addTrivialMessage(String message)| Displays a notification trivial message |
 
 ```javascript
-spUtil.addErrorMessage("Thanks for your order")
+spUtil.addTrivialMessage("Thanks for your order")
 ```
 
 | Method | Description|
@@ -58,6 +58,8 @@ Same as `server.refresh()`  The diference is that you can define what $scope to 
 ```javascript
 spUtil.recordWatch($scope, "live_profile", "sys_id=" + liveProfileId);
 ```
+
+More documentation on recordWatch can be found [here](./widget_record_watch.md).
 
 | Method | Description|
 | :------ | :----------- |
