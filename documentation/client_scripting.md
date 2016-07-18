@@ -100,6 +100,11 @@ These are the officially supported client scripting APIs you can use in onLoad, 
   * setDefaultOperator(operator)
   * getDefaultOperator()
 
+### g_modal
+* alert(title, message, callback)
+* confirm(title, message, callback)
+
+
 ### g_service_catalog
 * [isOrderGuide()](#g_service_catalog)
 
