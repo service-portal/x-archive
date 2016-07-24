@@ -4,6 +4,7 @@ Navigation is possible to a page or portal, this explains the URL schema.
 
 ##Navigating by Portal
 Navigating by portal displays the portal including the header, footer, and theme defined by the [Portal](portal.md)
+
   `https://<base instance URL>/<sp url suffix>?id=<page id>&<page parameters>`
 
 Elements:
