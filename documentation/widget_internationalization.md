@@ -55,9 +55,9 @@ In some cases, the translation might have quotes or double quotes on it. That co
 The safest way to fetch a translated message is to do it in the server script. 
 Then, assign the value to a client-side angular binding.
 
-#### Example Widget for Language Change
+#### Example Widget for Language Switch
 
-Users might change their language on the portal. The following Widget can be used as template to implement a customized language switch:
+Users might want to change the language on the portal. The following Widget can be used as template to implement a customized language switch:
 
 Html:
 ```html
