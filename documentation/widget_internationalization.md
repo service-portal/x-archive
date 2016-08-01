@@ -1,6 +1,17 @@
 # Internationalization
 Internationalizing strings in a widget is very simple with Service Portal. In any widget's HTML Template, simply write the following:
 
+[Translating strings in the HTML template](#translating-strings-in-the-html-template)
+
+[Translating strings in the Client Script](#translating-strings-in-the-client-script)
+
+[Translating strings in the Server Script](#translating-strings-in-the-server-script)
+
+[Safe translations](#safe-translations)
+
+[Language Switch Widget](#language-switch-widget)
+
+
 ### Translating strings in the HTML template
 #### HTML Template
 ```html
