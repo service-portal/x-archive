@@ -1,5 +1,5 @@
 
-## Navigating by URL
+## Portal URL
 Navigation is possible to a page or portal, this explains the URL schema.
 
 ##Navigating by Portal
