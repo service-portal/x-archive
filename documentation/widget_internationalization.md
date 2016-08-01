@@ -59,7 +59,7 @@ Then, assign the value to a client-side angular binding.
 
 <br/>
 
-### Language Switch
+### Language Switch Widget
 
 Users might want to change the language on the portal. The following Widget can be used as template to implement a customized language switch:
 
