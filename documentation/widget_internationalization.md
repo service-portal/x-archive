@@ -1,7 +1,7 @@
 # Internationalization
 Internationalizing strings in a widget is very simple with Service Portal. In any widget's HTML Template, simply write the following:
 
-#### HTML Template
+### HTML Template
 ```html
 <div>
   <p>${This message will be internationalized.}</p>
@@ -12,7 +12,7 @@ Writing text as ``${message}`` is the equivalent of writing ``${gs.getMessage("m
 
 <br/>
 
-#### Client Script
+### Client Script
 Text can be internationalized the same way inside a client script.
 ```javascript
 function() {
@@ -21,7 +21,7 @@ function() {
 }
 ```
 
-##### HTML Template
+### HTML Template
 ```html
 <div>
   <!-- The output of this text will be internationalized. -->
@@ -31,7 +31,7 @@ function() {
 
 <br/>
 
-#### Server Script
+### Server Script
 
 Great for translating schema options and other values fetch during server-side runtime. 
 
@@ -50,12 +50,12 @@ function() {
 
 <br/>
 
-#### Translations with quotes
+### Translations with quotes
 In some cases, the translation might have quotes or double quotes on it. That could lead to JavasScript errors if you are using the ${} syntax in the client script.  
 The safest way to fetch a translated message is to do it in the server script. 
 Then, assign the value to a client-side angular binding.
 
-### Example Widget for Language Switch
+### Language Switch Example
 
 Users might want to change the language on the portal. The following Widget can be used as template to implement a customized language switch:
 
