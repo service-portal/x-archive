@@ -1,7 +1,8 @@
 # Internationalization
 Internationalizing strings in a widget is very simple with Service Portal. In any widget's HTML Template, simply write the following:
 
-### HTML Template
+### Translating strings in the HTML template
+#### HTML Template
 ```html
 <div>
   <p>${This message will be internationalized.}</p>
@@ -12,7 +13,8 @@ Writing text as ``${message}`` is the equivalent of writing ``${gs.getMessage("m
 
 <br/>
 
-### Client Script
+### Translating strings in the Client Script
+#### Client Script
 Text can be internationalized the same way inside a client script.
 ```javascript
 function() {
@@ -20,8 +22,7 @@ function() {
   c.message = "${This message will be internationalized}";
 }
 ```
-
-### HTML Template
+#### HTML Template
 ```html
 <div>
   <!-- The output of this text will be internationalized. -->
@@ -31,10 +32,11 @@ function() {
 
 <br/>
 
-### Server Script
+### Translating strings in the Server Script
 
 Great for translating schema options and other values fetch during server-side runtime. 
 
+#### Server Script
 ```javascript
 function() {  
   data.message = gs.getMessage("this message contains 'quotes'");
@@ -50,48 +52,44 @@ function() {
 
 <br/>
 
-### Translations with quotes
+### Safe translations
 In some cases, the translation might have quotes or double quotes on it. That could lead to JavasScript errors if you are using the ${} syntax in the client script.  
 The safest way to fetch a translated message is to do it in the server script. 
 Then, assign the value to a client-side angular binding.
 
-### Language Switch Example
+### Language Switch
 
 Users might want to change the language on the portal. The following Widget can be used as template to implement a customized language switch:
 
 ##### HTML Template:
 ```html
 <div>
-<a ng-href="#" ng-click="changeUserLanguage()">${change language}</a>
+  ${Change Language}:
+  <sn-record-picker table="'sys_language'" display-field="'name'" value-field="'id'" field="c.language" default-query="'active=true'"></sn-record-picker> 
+  <button class="btn btn-default" ng-click="c.changed()">Apply</button> 
 </div>
 ```
 
 ##### Client Script:
 ```javascript
-function($scope, spUtil, snRecordWatcher) {
-	$scope.changeLanguage = false;
-
-	$scope.changeUserLanguage = function(){
-		$scope.data.changeLanguage = true;
-		spUtil.update($scope);
-		window.location.reload();
-	}
+function($window) {  
+  var c = this;		
+	c.language = {value: 'en', displayValue: 'English'};		
+	c.changed = function(a) {							
+		c.server.get(c.language).then(function() {			
+			$window.location.reload();			
+		})		
+	}	
 }
 ```
 
 ##### Server Script:
 ```javascript
-(function() {
-	if(input){
-		var user = gs.getUser();
-
-		if (user.getPreference("user.language") == "de"){
-				user.setPreference("user.language", "en");
-				user.savePreferences();
-		}else {
-				user.setPreference("user.language", "de");
-				user.savePreferences();
-		}
-	}
+(function() {			
+ if (input) {	 	 
+	 var user = gs.getUser();	 	 	 
+	 user.setPreference("user.language", input.value);
+	 user.savePreferences();	 
+ }
 })();
 ```
