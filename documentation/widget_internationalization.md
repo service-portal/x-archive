@@ -65,7 +65,12 @@ Users might want to change the language on the portal. The following Widget can 
 ```html
 <div>
   ${Change Language}:
-  <sn-record-picker table="'sys_language'" display-field="'name'" value-field="'id'" field="c.language" default-query="'active=true'"></sn-record-picker> 
+  <sn-record-picker 
+  table="'sys_language'" 
+  display-field="'name'" 
+  value-field="'id'" 
+  field="c.language" 
+  default-query="'active=true'"></sn-record-picker> 
   <button class="btn btn-default" ng-click="c.changed()">Apply</button> 
 </div>
 ```
