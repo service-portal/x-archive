@@ -82,9 +82,6 @@ function($scope, spUtil, snRecordWatcher) {
 ##### Server Script:
 ```javascript
 (function() {
-  /* populate the 'data' object */
-  /* e.g., data.table = $sp.getValue('table'); */
-	// Handle Change:
 	if(input){
 		var user = gs.getUser();
 
