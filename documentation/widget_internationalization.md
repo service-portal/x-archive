@@ -1,5 +1,6 @@
 # Internationalization
-Internationalizing strings in a widget is very simple with Service Portal. In any widget's HTML Template, simply write the following:
+
+To internationalize strings in a widget, use `${string}` or `gs.getMessage("message")`. See when to use one form or another below:
 
 [Translating strings in the HTML template](#translating-strings-in-the-html-template)
 
