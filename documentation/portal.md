@@ -20,7 +20,7 @@ These are the configuration settings when you create a new portal.
 | 404 page| Default 404 Page |notfound_page, notfound_page_dv |
 | Catalog| Service Catalog in use | |
 | Catalog home page | Catalog home page | |
-| Main menu | Reference to widget used for the menu | |
+| Main menu | Reference to widget used for the menu | sp_rectangle_menu, sp_rectangle_menu_dv |
 | Theme| Theme in use |theme, theme_dv |
 
 You can access to all these properties from the [Client Script](widget_client_script.md) using: `$scope.portal`
