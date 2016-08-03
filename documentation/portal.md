@@ -2,7 +2,7 @@
 
 These are the configuration settings when you create a new portal.
 
-| Property | Description | $scope.portal Variable
+| Property | Description | Portal Variable
 | :------ | :----------- | :----------- |
 | Title   | The Portal title. This is how the page will render the title: `<title>{Portal Title} - {Page Title}</title>` | title |
 | Url Suffix | The directory name: `[instance:port]/url_suffix/` to idenfity the portal | url_suffix |
