@@ -6,8 +6,8 @@ These are the configuration settings when you create a new portal.
 | :------ | :----------- | :----------- |
 | Title   | The Portal title. This is how the page will render the title: `<title>{Portal Title} - {Page Title}</title>` | title |
 | Url Suffix | The directory name: `[instance:port]/url_suffix/` to idenfity the portal | url_suffix |
-| Homepage    | Index page associated to this portal | homepage |
-| Knowledge base | Knowledge base home page |kb_knowledge_base |
+| Homepage    | Index page associated to this portal | homepage, homepage_dv |
+| Knowledge base | Knowledge base home page |kb_knowledge_base, kb_knowledge_base_dv, kb_knowledge_page, kb_knowledge_page_dv |
 | Social QA Knowledge Base| Default QA knowledge base | |
 | KB home page | Default KB home page  | |
 | Login page| Default Login Page | |
