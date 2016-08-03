@@ -19,7 +19,7 @@ These are the configuration settings when you create a new portal.
 | Application| Application scope | |
 | 404 page| Default 404 Page |notfound_page, notfound_page_dv |
 | Catalog| Service Catalog in use | |
-| Catalog home page | Catalog home page | |
+| Catalog home page | Catalog home page | sp_catalog, sp_catalog|
 | Main menu | Reference to widget used for the menu | sp_rectangle_menu, sp_rectangle_menu_dv |
 | Theme| Theme in use |theme, theme_dv |
 
