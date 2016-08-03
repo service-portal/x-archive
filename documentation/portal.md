@@ -4,7 +4,7 @@ These are the configuration settings when you create a new portal.
 
 | Property | Description | $scope.portal Variable
 | :------ | :----------- | :----------- |
-| Title   | The Portal title. This is how the page will render the title: `<title>{Portal Title} - {Page Title}</title>` | $scope.portal.title |
+| Title   | The Portal title. This is how the page will render the title: `<title>{Portal Title} - {Page Title}</title>` | title |
 | Url Suffix | The directory name: `[instance:port]/url_suffix/` to idenfity the portal | url_suffix |
 | Homepage    | Index page associated to this portal | homepage |
 | Knowledge base | Knowledge base home page |kb_knowledge_base |
