@@ -25,6 +25,8 @@ Service Portal provides a set of convenience methods found on the global `$sp` o
 | [getValues](#getValues)(Object, String): void | Copies values from the request or instance into the data parameter. |
 | [getValues](#getValues)(Object): void | Copies values from the widget's sp_instance GlideRecord into the data parameter. |
 | [getWidget](#getWidget)(String, Object): Object | Returns a widget model for embedding a widget inside another widget. |
+| getSCRecord(): Object | Returns sc_cat_item record for the portal's catalog with sys_class_name != sc_cat_item_wizard and active = true in the query. GlideRecord returned has not yet triggered the query. |
+
 
 <a name="getPortalRecord"></a> $sp.getPortalRecord()
 ------
