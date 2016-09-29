@@ -36,7 +36,6 @@ If you can't find what are you looking for: open an issue. If you'd like to cont
 + [CMS and Service Portal](documentation/cms.md)
 + [SSO, Login & Redirect](documentation/sso_configuration.md)
 + [Service Catalog Patch 2 Changes](documentation/service_catalog_patch2_changes.md)
-+ [Istanbul Shopping Cart](documentation/shopping_cart.md)
 + [FAQ](documentation/faq.md)
 
 ___
