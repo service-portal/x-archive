@@ -3,7 +3,7 @@ New in the Istanbul release, shopping carts have been added to the Service Catal
 
 ## Enabling or Disabling the Cart
 
-The Shopping Cart should be enabled on instances by default upon upgrading to Helsinki. That said, there are a couple of things you can do to manually turn on and off the cart.
+The Shopping Cart should be enabled on instances by default upon upgrading to Istanbul. That said, there are a couple of things you can do to manually turn on and off the cart.
 
  * Enable the "Show Add to Cart" widget option on the SC Cat Item widget. You should see an "Add to Cart" button on all catalog items that can be added to your carts. The `no_cart` field on catalog items is supported.
 
