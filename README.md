@@ -20,6 +20,7 @@ If you can't find what are you looking for: open an issue. If you'd like to cont
 + [Widget](documentation/widget.md)
   - [HTML](documentation/widget_html.md)
   - [Client Script](documentation/widget_client_script.md)
+  - [Link Function (Advanced)](documentation/widget_link.md)
   - [Server Script](documentation/widget_server_script.md)  
   - [Dependencies](documentation/widget_dependencies.md)
   - [CSS/SCSS](documentation/css.md)
