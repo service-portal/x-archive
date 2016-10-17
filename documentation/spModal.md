@@ -11,7 +11,7 @@ spModal provides an alternative way to show alerts, prompts, and confirmation di
 
 ## Examples
 
-<a name="alert"></a> Alert
+Alert
 ------
 
 ![alert modal](/assets/spmodal/alert.png)
@@ -36,7 +36,7 @@ function(spModal) {
 ```
 <br /> <br />
 
-<a name="confirm"></a> Confirm
+Confirm
 ------
 
 ![confirm modal](/assets/spmodal/confirm.png)
