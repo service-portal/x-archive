@@ -1,5 +1,43 @@
 # Helsinki change log
 
+## Helsinki Patch 5 Changes
+* Added a limit to typeahead search (defaults to 15)
+* Several fixes for permissions and element access on search results page
+* URL routing fix. When the path or portal changes, redirect to that new page
+* KB article attachments moved to bottom for consistency w/ platform UI
+* Clicking on links from the sc-category widget can now be intercepted and changed by a parent widget. Added the event name to the widget options schema.
+* KB category article count might show -1, it shouldn't; $sp.getKBCount now only counts published articles
+* Check_can_view widget option for SC Categories widget wasn't evaluated correctly after being set from true to false
+* sp_admin role should be able to CRUD sp_ng_template records
+* List widget did not honor glide.security.ui.filter system property or Dictionary attribute for table to force use of FilteredGlideRecord in lists
+* Added spModal api for a nicer alert, confirm, prompt:
+	* spModel.alert(title)
+	* spModel.confirm(title)
+	* spModel.prompt(title, defaultValue)
+* **Form Widget**
+	* In the activity stream, added a color bar to distinguish journal fields. Uses the accompanying system property (e.g., glide.ui.activity_stream.style.work_notes)
+	* Support for journal stream for non-tasks
+	* Pick the first choice in a choice list if none are selected
+	* Don't expose short_description in ticket_conversation widget if user can't read that field
+	* Don't show attachment icon or Edit link if user can't do attachments
+	* Dont show 'record not found' once the form loads a record that DOES exist
+	* Choice list now sets the value & displayValue
+	* long, unbroken title is not wrapped in ticket conversation widget header
+	* At mobile device width, the activity stream was unusable
+	* Fixing some edge cases while using g_form.setValue() and the glide_list element. Like setting multiple display values at the same time.
+	* Making the variable editor show display values for reference fields and list collector fields
+	* Prevent duplicate --None-- in choice list
+* **Catalog support**
+	* Order Guide description isn't being shown
+	* Fixing reference qualifiers for list collector variable types
+	* Quantity picker wasn't wide enough
+	* For SP catalog item requests, Attachments are now attached to the sc_req_item instead of the sc_request
+	* Order Guide didn't show images for guide or included items
+	* Adding support for catalog item variable and variable set layouts: 2down, 2across.
+	
+
+<br /><br /><br />
+
 ## Helsinki Patch 4 Changes
 
 * Every out-of-box widget translated
