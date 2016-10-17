@@ -38,7 +38,7 @@ If you can't find what are you looking for: open an issue. If you'd like to cont
 + [SSO, Login & Redirect](documentation/sso_configuration.md)
 + [Service Catalog Patch 2 Changes](documentation/service_catalog_patch2_changes.md)
 + [FAQ](documentation/faq.md)
-
++ [Helsinki Patch Changelog](documentation/release-notes/helsinki.md)
 ___
 
 >This site is unofficial and not endorsed by ServiceNow.
