@@ -1,5 +1,16 @@
 # Helsinki change log
 
+
+## Helsinki Patch 6 Changes
+
+* The Variable type checkbox value needs to be string "true"||"false" so glideform apis and ui policy conditions can work
+* External content item should open in a new tab from SC category page
+* g_form.setValue to empty is broken for reference fields in Service Portal
+* evaluate order guide rule base condition from database, not client
+* Formatter type variables like container_start would cause order guide eval fail
+
+<br /><br /><br />
+
 ## Helsinki Patch 5 Changes
 * Added a limit to typeahead search (defaults to 15)
 * Several fixes for permissions and element access on search results page
