@@ -139,14 +139,16 @@ function(spModal) {
 
 <br /> <br />
 
-Prompt (with label)
+Open
 ------
 
-![spModal prompt with custom label](/assets/spmodal/prompt_with_label.png)
+### Example 1: Prompt with label
+
+![spModal prompt with message](/assets/spmodal/prompt_with_label.png)
 
 **Html Template**
 ```html
-  <button ng-click="c.onPromptEx()" class="btn btn-default">
+  <button ng-click="c.onOpen()" class="btn btn-default">
     Prompt with label
   </button>
   <div ng-show="c.name">
@@ -158,7 +160,7 @@ Prompt (with label)
 ```javascript
 function(spModal) {
   var c = this;
-  c.onPromptEx = function() {
+  c.onOpen = function() {
 		//ask the user for a string
 		spModal.open({
 			title: 'Give me a name',
@@ -175,41 +177,71 @@ function(spModal) {
 
 <br /> <br />
 
-Heading
-------
+### Example 2: Agree with custom buttons
 
-![alt](/assets/spmodal/img.png)
+![spModal agree dialog](/assets/spmodal/open_with_promise.png)
 
 **Html Template**
 ```html
-  
+  <button ng-click="c.onAgree()" class="btn btn-default">
+    Agree
+  </button>
+  <div ng-show="c.agree">
+    You answered {{c.agree}}
+  </div>
 ```
 
 **Client Script**
 ```javascript
 function(spModal) {
   var c = this;
-  
+  c.onAgree = function() {
+		// ask the user for a string
+		// note embedded html in message
+		var h = '<h4>Apple likes people to agree to lots of stuff</h4>'
+		var m = 'Your use of Apple software or hardware products is based on the software license and other terms and conditions in effect for the product at the time of purchase. Your agreement to these terms is required to install or use the product. '
+		spModal.open({
+			title: 'Do you agree?',
+			message: h + m,
+			buttons: [
+				{label:'✘ ${No}', cancel: true},
+				{label:'✔ ${Yes}', primary: true}
+			]
+		}).then(function() {
+			c.agree = 'yes';
+		}, function() {
+			c.agree = 'no';
+		})
+	}
 }
 ```
 
 
 <br /> <br />
 
-Heading
-------
+### Example 3: Embedded widget 
 
-![alt](/assets/spmodal/img.png)
+![spModal embedded widget](/assets/spmodal/embedded_widget.png)
 
 **Html Template**
 ```html
-  
+  <button ng-click="c.onWidget('widget-cool-clock')" class="btn btn-default">
+    Cool Clock
+  </button>
 ```
 
 **Client Script**
 ```javascript
 function(spModal) {
   var c = this;
-  
+  c.onWidget = function(widgetId, widgetInput) {
+		spModal.open({
+			title: 'Displaying widget ' + widgetId,
+			widget: widgetId, 
+			widgetInput: widgetInput || {}
+		}).then(function(){
+			console.log('widget dismissed');
+		})		
+	}
 }
 ```
