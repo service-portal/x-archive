@@ -245,3 +245,38 @@ function(spModal) {
 	}
 }
 ```
+
+<br /> <br />
+
+### Example 4: Modal sizes 
+
+![spModal size small](/assets/spmodal/size_sm.png)
+![spModal size medium](/assets/spmodal/size_md.png)
+![spModal size large](/assets/spmodal/size_lg.png)
+
+**Html Template**
+```html
+  <button ng-click="c.onSize('sm')" class="btn btn-default">
+    Small
+  </button>
+  <button ng-click="c.onSize()" class="btn btn-default">
+    Default
+  </button>
+  <button ng-click="c.onSize('lg')" class="btn btn-default">
+    Large
+  </button>
+```
+
+**Client Script**
+```javascript
+function(spModal) {
+  var c = this;
+  c.onSize = function(size) {
+		spModal.open({
+			title: 'Bootstrap modal sizes, sm, lg',
+			size: size,
+			message: 'Size set to ' + size
+		})
+	}
+}
+```
