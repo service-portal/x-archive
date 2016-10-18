@@ -1,4 +1,6 @@
 # spModal api
+_Available in Helsinki Patch 5_
+
 spModal provides an alternative way to show alerts, prompts, and confirmation dialogs. Additionally you can use spModal.open() to display a widget in a modal dialog. spModal is a lightweight wrapper for angular UI bootstrap's $uibModal. See here for more info: https://angular-ui.github.io/bootstrap/#/modal
 
 | Method | Description |
