@@ -71,6 +71,23 @@ Then, assign the value to a client-side angular binding.
 
 <br/>
 
+
+### Manual translations in the back-end
+
+In order to translate text manually for the use cases that are mentioned above, you need to add entries in the Message table (`sys_ui_message`).
+
+When translating ```${this message}``` use the following values in the table entry:
+
+* Key: this message
+* Language: desired language
+* Message: your translation
+
+For testing, switch to the desired language in your profile settings and refresh the page on the portal.
+
+
+<br/>
+
+
 ### Language Switch Widget
 
 Users might want to change the language on the portal. The following Widget can be used as template to implement a customized language switch:
