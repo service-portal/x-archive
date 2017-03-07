@@ -1,3 +1,6 @@
+### Can unauthenticated users order items in the Service Catalog using Service Portal?
+No. Service Catalog ordering depends on an AngularProcessor transaction that currently requires documentation. Unauthenticated users will be allowed to see Catalog items, but ordering will not work as expected.
+
 ### Are Order Guides supported?
 Yes. Order Guides are supported on the sc_cat_item_guide page. We fixed the catalog item linking issue in Helsinki Patch 1 so until that's released, make sure you access order guide items like this: 
 
