@@ -3,6 +3,8 @@
 
 Service Portal runs client scripts & catalog client scripts as long as the UI Type is set to "Mobile" or "Both". Many of your existing client scripts can be set to "Both" as long as the api calls are supported by the mobile client scripting environment.
 
+Please note: This document applies to the Form widget and SC Catalog Item widget. Client Scripts are different than a widget's client controller & link script blocks.
+
 #### Unsupported client scripting globals
 
 The following globals and APIs are unavailable in service portal client script:
