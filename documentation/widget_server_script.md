@@ -18,5 +18,5 @@ This code will be executed within the context of the widget instance related to 
 | :------ | :----------- |
 | `input`   | An object containing client-side properties set under `c.data`. It will have an `undefined` value until the client-side controller calls `c.server.update()` |
 | `data` | An object containing properties set during server-side execution |
-| `option`    | An object containing the schema option properties |
+| `options`    | An object containing the schema option properties |
 | [`$sp`](widget_server_script_apis.md#sp-api) | Helper class used to access server script API |
