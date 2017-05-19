@@ -13,7 +13,7 @@ Service Portal provides a set of convenience methods found on the global `$sp` o
 | [getListColumns](#getListColumns)(String tableName, String view): |Returns a list of the specified table's columns in the specified view|
 | [getMenuItems](#getMenuItems)(String sys_id): Array | Returns the menu items for the specified instance |
 | [getMenuHREF](#getMenuHREF)(GlideRecord): String | Returns the (?id=) portion of the URL based on the sp_menu type. |
-| [getParameter](#getParameter)(String): String | Returns the value of a given key from the query string or post body. |
+| [getParameter](#getParameter)(String): Object | Returns the value of a given key from the query string or post body. |
 | [getPortalRecord](#getPortalRecord)(): GlideRecord  | Returns the portal's GlideRecord. |
 | [getRecord](#getRecord)(): Glide | Returns the GlideRecord for the current sp_instance\*. Returns null if the widget is embedded by another widget. |
 | [getRecordDisplayValues](#getRecordDisplayValues) (Object, GlideRecord, String): void | Copies display values for the specified field names from a GlideRecord into the data parameter. |
