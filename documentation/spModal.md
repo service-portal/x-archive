@@ -21,6 +21,7 @@ spModal provides an alternative way to show alerts, prompts, and confirmation di
 | value | string | empty | The value of the input field |
 | widget | string | empty | The Widget Id or sys_id to embed in the modal |
 | widgetInput | object | null | An object to send to the embedded widget as input |
+| shared | object | null | A client-side object to share data with the embedded widget client script |
 | size | string | empty | 'sm' or 'lg' |
 
 ## Examples
@@ -281,4 +282,82 @@ function(spModal) {
 		})
 	}
 }
+```
+
+
+<br /> <br />
+
+### Example 5: Embedded widget with shared data
+
+![open_shared_data](/assets/spmodal/open_shared_data.gif)
+
+This example requires 2 widgets.
+
+#### Parent Widget
+
+**Html Template**
+```html
+<div>
+  <button ng-click="c.onChangeSchedule()">
+    Open
+  </button>
+  
+  <div ng-if="c.selectedValue">
+    You picked: {{c.selectedValue.text}}
+  </div>
+</div>
+```
+
+**Client Script**
+```javascript
+function ($scope,spModal) {	
+	var c = this;
+	var shared = {};
+	c.onChangeSchedule = function(){
+		spModal.open({
+			title: 'Select a value',
+			widget: 'bec1438bdbf276009ed8f81d0f96193e',
+			widgetInput: { hint: "Soup or Nuts?" },
+			shared: shared
+		}).then(function() {
+			// Shared object was updated
+			c.selectedValue = shared.selection;
+		});
+	}
+}
+```
+
+#### Embedded Widget
+
+Name: **bec1438bdbf276009ed8f81d0f96193e**
+
+**Html Template**
+```html
+<div>
+	<select ng-model="c.selection" ng-model-options="{getterSetter: true}" ng-options="v.text for (k, v) in data.questions">
+  <option value="">{{::c.data.hint}}</option>
+  </select>
+</div>
+```
+
+**Client Script**
+```javascript
+function() {
+  var c = this;
+	
+	var shared = c.widget.options.shared;
+	c.selection = function selection(newVal) {
+		return angular.isDefined(newVal) ? (shared.selection = newVal) : shared.selection;
+	}
+}
+```
+
+**Server Script**
+```javascript
+(function() {
+	data.hint = input.hint;
+	data.questions=[];
+	data.questions.push({text: 'Soup', value: 'soup'});
+	data.questions.push({text: 'Nuts', value: 'nuts'});
+})();
 ```
