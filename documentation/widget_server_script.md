@@ -1,5 +1,5 @@
 ## Widget Server Script
-This is where you put the server-side logic for your widget. This is helpful primarily with interacting with the Glide platform through ServiceNow [server-side APIs](https://developer.servicenow.com/app.do#!/api_doc?v=helsinki&id=server). 
+This is where you put the server-side logic for your widget. This is helpful primarily with interacting with the Glide platform through ServiceNow [server-side APIs](https://developer.servicenow.com/app.do#!/api_doc?id=server). 
 
 ```javascript
 if (input) {
