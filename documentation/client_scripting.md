@@ -114,7 +114,6 @@ These are the officially supported client scripting APIs you can use in onLoad, 
   * getXML(callback)
   * getXMLAnswer(callback)
   * getJSON(callback)
-  * getXMLAnswer()
   * setErrorCallback(errorCallback)
   * getURL()
   * getParams()
