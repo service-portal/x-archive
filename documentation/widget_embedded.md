@@ -7,13 +7,13 @@ For a direct example of this, see the Social QA Question widget, which embeds a 
 ---
 
 ## Widget Directive Syntax
-You can embed any widget inside of your widget’s [HTML template](widget_html.md) using the custom `<sp-widget></sp-widget>` element.
+You can embed any widget inside of your widget’s [HTML template](widget_html.md) using the custom `<widget><widget>` element.
 The basic usage looks like this:
 
 ###### HTML Template
 ```html
 <div>
-  <sp-widget id="widget-cool-clock"></sp-widget>
+  <widget id="widget-cool-clock"></widget>
 </div>
 ```
 _The `id` parameter is simply the id of the widget you're trying to embed._
@@ -27,7 +27,7 @@ Widgets might have [options](widget_options.md) that you can setup. You can defi
 
 ###### HTML Template
 ```html
-<sp-widget id="widget-cool-clock" options='{"zone": "America/Los_Angeles","title": "San Diego, CA"}'></sp-widget>
+<widget id="widget-cool-clock" options='{"zone": "America/Los_Angeles","title": "San Diego, CA"}'><widget>
 ```
 
 ![Clock Options](/assets/widget_embedded/clock-options.png)
@@ -38,7 +38,7 @@ You don't necessarily need to provide options in the HTML template.
 
 ###### HTML template
 ```html
-<sp-widget id="widget-cool-clock" options='data.clockOptions'></sp-widget>
+<widget id="widget-cool-clock" options='data.clockOptions'><widget>
 ```
 ###### Server Script
 ```javascript

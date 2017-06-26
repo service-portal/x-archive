@@ -279,6 +279,33 @@ Result
 
 ![Screenshot](/assets/widget_server_script_apis/getDisplayValue.png)
 
+<a name="getRecordElements"></a> $sp.getRecordElements()
+-----
+Copies display values for the specified field names from a GlideRecord into the data parameter.
+
+
+- $sp.getRecordElements( Object, GlideRecord, String ): void 
+	- **Parameters**
+		- (*Object*) data 
+		 Must pass data object instantiated by the server.
+		- (*GlideRecord*) GlideRecord 
+		 Any GlideRecord of data
+		- (*String*) String 
+		 Comma-delimited string of fieldnames
+
+	- **Returns**
+		- (*Void*)
+		 Field objects will be added to data
+<br/>
+Server Script
+
+```javascript
+(function($sp) {
+        var gr = new GlideRecord("tablename");
+	var fieldnames = "sys_id,field_name";
+ 	$sp.getRecordElements(data, gr, fieldnames); 
+})($sp);
+```
 
 <a name="getValue"></a> $sp.getValue()
 -----
