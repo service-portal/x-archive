@@ -107,8 +107,7 @@ function($window) {
 (function() {			
  if (input) {	 	 
 	 var user = gs.getUser();	 	 	 
-	 user.setPreference("user.language", input.value);
-	 user.savePreferences();	 
+	 user.savePreference("user.language", input.value);
  }
 })();
 ```
